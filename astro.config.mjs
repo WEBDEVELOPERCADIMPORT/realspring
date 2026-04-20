@@ -13,7 +13,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  site: 'https://kerrinfull.cloud',
+  site: 'https://realspringllc.com',
 
   adapter: cloudflare(),
   i18n: {
