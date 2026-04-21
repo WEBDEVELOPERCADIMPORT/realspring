@@ -1,0 +1,53 @@
+---
+import content from '../../../data/site-home-content.json'
+import type { Lang } from '../../../i18n/config.i18n'
+import Button from '../../utils/Button.astro'
+
+interface Props {
+    lang: Lang
+}
+
+const { lang } = Astro.props
+
+const data = content[lang].contact
+---
+
+
+<section id="contact" class="relative w-full h-auto bg-gray-real overflow-hidden">
+
+    <div class="flex flex-col p-10 mt-20 mb-20 gap-5 justify-center items-center">
+        <h2 class="relative text-blue-real text-4xl font-alexandria text-center">
+            {data.title}
+        </h2>
+        <h3 class="relative text-black-real text-1xl font-alexandria text-center">
+            {data.subtitle}
+        </h3>
+        <div class="w-full xl:w-2xl justify-center">
+            <form action="" class="bg-white-real border-l-3 border-l-blue-real flex flex-col gap-3 p-10 shadow-2xl">
+                <div class="flex flex-col">
+                    <label for="name" class="text-blue-real font-bold">
+                        {data.form.inputs.name}
+                    </label>
+                    <input id="name" name="name" type="text" class="bg-gray-real inset-shadow-sm p-2">
+                </div>
+                <div class="flex flex-col">
+                    <label for="email" class="text-blue-real font-bold">
+                        {data.form.inputs.email}
+                    </label>
+                    <input id="email" name="email" type="email" class="bg-gray-real inset-shadow-sm p-2">
+                </div>
+                <div class="flex flex-col">
+                    <label for="description" class="text-blue-real font-bold">
+                        {data.form.inputs.description}
+                    </label>
+                    <textarea id="description" name="description" rows="4" class="bg-gray-real inset-shadow-sm p-2">
+                    </textarea>
+                </div>
+                <div class="flex flex-col">
+                    <Button color='red-real' labelColor='white-real' label={data.form.buttonAccion} />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</section

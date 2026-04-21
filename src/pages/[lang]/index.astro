@@ -2,11 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import content from '../../data/site-content.json';
 import type { Lang } from '../../i18n/config.i18n';
-import HeroHome from '../../components/home/hero/hero_home.astro';
+import Hero from '../../components/home/sections/Hero.astro';
 import Legacy from '../../components/home/sections/Legacy.astro';
 import Mandate from '../../components/home/sections/Mandate.astro';
 import Visionary from '../../components/home/sections/Visionary.astro';
 import History from '../../components/home/sections/History.astro';
+import Contact from '../../components/home/sections/Contact.astro'
 
 const lang = Astro.params.lang as Lang;
 const data = content[lang];
@@ -17,12 +18,12 @@ if (!(lang in content)) {
 ---
 
 <Layout title={data.brandName} lang={lang}>
-    <HeroHome lang={lang} />
+    <Hero lang={lang} />
     <Legacy lang={lang} />
     <Mandate lang={lang}/>
     <Visionary lang={lang}/>
     <History lang={lang}/>
-    <div class="min-h-screen flex flex-col items-center justify-center relative p-6">
+    <div class="min-h-screen flex flex-col items-center justify-center relative p-6 bg-white-real">
         
         <div class="relative group mb-20">
             <div class="absolute inset-0 bg-gradient-to-r from-[#21D4ED] to-[#AF25FD] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 rounded-full"></div>
@@ -49,4 +50,5 @@ if (!(lang in content)) {
             ® Central America
         </h1>
     </div>
+    <Contact lang={lang}/>
 </Layout>
