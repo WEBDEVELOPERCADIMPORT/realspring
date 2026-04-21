@@ -1,0 +1,38 @@
+---
+import content from '../../../data/site-home-content.json'
+import type { Lang } from '../../../i18n/config.i18n'
+import Date from '../../utils/Date.astro'
+
+interface Props {
+    lang: Lang
+}
+
+
+const { lang } = Astro.props
+
+const data = content[lang].history
+---
+
+
+<section id="history" class="relative w-full h-auto bg-white-real overflow-hidden">
+
+    <div class="flex flex-col p-10 mt-20 mb-20 gap-10">
+        <h2 class="relative text-center text-blue-real text-2xl font-alexandria">
+            {data.title}
+        </h2>
+        <div class="flex flex-col xl:flex-row w-full gap-10">
+            <div class="w-full grid grid-cols-1 xl:grid-cols-2 gap-10">
+                    {
+                        data.content.dates ? (
+                            data.content.dates.map( date => {
+                                return (
+                                    <Date date={date.date} title={date.title} paragraph={date.paragraph} squareColor={date.squareColor} />
+                                )
+                            })
+                        ) : null
+                    }
+                </div>
+        </div>
+    </div>
+
+</section>

@@ -6,6 +6,7 @@ import HeroHome from '../../components/home/hero/hero_home.astro';
 import Legacy from '../../components/home/sections/Legacy.astro';
 import Mandate from '../../components/home/sections/Mandate.astro';
 import Visionary from '../../components/home/sections/Visionary.astro';
+import History from '../../components/home/sections/History.astro';
 
 const lang = Astro.params.lang as Lang;
 const data = content[lang];
@@ -20,6 +21,7 @@ if (!(lang in content)) {
     <Legacy lang={lang} />
     <Mandate lang={lang}/>
     <Visionary lang={lang}/>
+    <History lang={lang}/>
     <div class="min-h-screen flex flex-col items-center justify-center relative p-6">
         
         <div class="relative group mb-20">

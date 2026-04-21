@@ -55,6 +55,41 @@
                         }
                     ]
                 }
+            },
+            "history": {
+                "title": "EL CENTRO VISIONARIO",
+                "content": {
+                    "dates": [
+                        {
+                            "id": 1,
+                            "date": "1924",
+                            "squareColor": "blue-real",
+                            "title": "El Acta Fundacional",
+                            "paragraph": "Establecida en la ciudad de Nueva York con el mandato de proporcionar financiamiento estructural para el creciente horizonte de la nación."
+                        },
+                        {
+                            "id": 2,
+                            "date": "1968",
+                            "squareColor": "blue-real",
+                            "title": "Expansión Continental",
+                            "paragraph": "Inauguró oficinas regionales a través del Sun Belt, liderando la revolución económica suburbana."
+                        },
+                        {
+                            "id": 3,
+                            "date": "2005",
+                            "squareColor": "red-real",
+                            "title": "Pivote Institucional",
+                            "paragraph": "Consolidó activos bajo el estandarte \"Liberty\", centrándose exclusivamente en participaciones institucionales de alto rendimiento."
+                        },
+                        {
+                            "id": 4,
+                            "date": "2024",
+                            "squareColor": "blue-real",
+                            "title": "Arquitectura Global",
+                            "paragraph": "Aprovechando la inteligencia digital para gestionar una cartera de más de 42 mil millones de dólares en infraestructura esencial y comercio."
+                        }
+                    ]
+                }
             }
     },
     "en": {
@@ -110,6 +145,41 @@
                             "id": 2,
                             "title": "VISION",
                             "paragraph": "Setting the definitive benchmark for corporate stewardship, where Liberty Estate serves as the primary synonym for trust, authority, and future-ready excellence."
+                        }
+                    ]
+                }
+            },
+            "history": {
+                "title": "THE VISIONARY CORE",
+                "content": {
+                    "dates": [
+                        {
+                            "id": 1,
+                            "date": "1924",
+                            "squareColor": "blue-real",
+                            "title": "The Founding Charter",
+                            "paragraph": "Established in New York City with a mandate to provide structural financing for the nation's rising skyline."
+                        },
+                        {
+                            "id": 2,
+                            "date": "1968",
+                            "squareColor": "blue-real",
+                            "title": "Continental Expansion",
+                            "paragraph": "Inaugurated regional offices across the Sun Belt, spearheading the suburban economic revolution."
+                        },
+                        {
+                            "id": 3,
+                            "date": "2005",
+                            "squareColor": "red-real",
+                            "title": "Institutional Pivot",
+                            "paragraph": "Consolidated assets under the \"Liberty\" banner, focusing exclusively on high-yield institutional holdings."
+                        },
+                        {
+                            "id": 4,
+                            "date": "2024",
+                            "squareColor": "blue-real",
+                            "title": "Global Architecture",
+                            "paragraph": "Leveraging digital-first intelligence to manage a $42B+ portfolio of essential infrastructure and commerce."
                         }
                     ]
                 }
