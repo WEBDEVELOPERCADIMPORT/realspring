@@ -3,17 +3,17 @@ import { lazy } from 'astro:schema';
 import type { Lang } from '../../i18n/config.i18n';
 import { ui } from "../../i18n/ui.i18n";
 import { getLangFromUrl, useTranslations } from '../../i18n/utils.i18n';
-import ChangeLanguage from '../layout/ChangeLanguage.astro';
+import ChangeLanguage from '../utils/ChangeLanguage.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<nav class="sticky top-0 z-50 w-full px-6 py-4 bg-transparent  backdrop-blur-md border-b border-gray-100">
+<nav class="sticky top-0 z-50 w-full px-6 py-4 bg-white  backdrop-blur-md border-b border-gray-100">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
     
     <a href={`/${lang}/`} class="flex items-center gap-2 transition hover:opacity-80 w-30 ">
-      <img class="w-full" src="/real.png" class="w-10 h-10 object-contain" alt="Logo del sitio" />
+      <img class="w-full" src="/logo_real.png" class="w-10 h-10 object-contain" alt="Logo del sitio" />
     </a>
 
     <div class="flex items-center gap-6 sm:gap-8">

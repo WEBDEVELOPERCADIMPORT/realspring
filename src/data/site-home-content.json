@@ -1,0 +1,18 @@
+{
+    "es": {
+            "brandName": "REALSPRING - INICIO ",
+            "hero": {
+                "title": "Construido con Autoridad Arquitectónica.",
+                "subtitle": "El referente en excelencia institucional y preservación del capital.",
+                "buttonAccion": "SABER MAS"
+            }
+    },
+    "en": {
+            "brandName": "REALSPRING - HOME ",
+            "hero": {
+                "title": "Built with Architectural Authority.",
+                "subtitle": "The standard in institutional excellence and capital preservation.",
+                "buttonAccion": "EXECUTIVE OVERVIEW"
+            }
+    }
+}

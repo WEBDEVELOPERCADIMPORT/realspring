@@ -1,0 +1,16 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+
+interface Props extends HTMLAttributes<'button'> {
+    color?: string
+    label?: string
+    labelColor?: string
+}
+
+const { color = "gray-300", label = "Enviar", labelColor = "white-real", ...rest } = Astro.props
+---
+
+<button class={`bg-${color} text-${labelColor} px-10 py-4 shadow-2xs font-bold`  } {...rest}>
+    { label }
+</button>
