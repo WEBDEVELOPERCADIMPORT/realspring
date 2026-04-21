@@ -1,0 +1,51 @@
+---
+import content from '../../../data/site-home-content.json'
+import Metric from '../../utils/Metric.astro'
+import type { Lang } from '../../../i18n/config.i18n'
+
+interface Props {
+    lang: Lang
+}
+
+
+const { lang } = Astro.props
+
+const data = content[lang].legacy
+---
+
+
+<section class="relative w-full h-screen bg-white-real overflow-hidden">
+
+    <img 
+        src="/svg/legacy/tribunal.svg" 
+        class="absolute top-20 -right-20 w-80 h-auto opacity-10 md:right-0 md:w-100"        
+        alt=""
+    />
+
+    <div class="flex flex-col p-10 mt-20 gap-10">
+        <h2 class="text-red-real text-1xl font-alexandria font-medium">
+            {data.title}
+        </h2>
+        <div class="flex flex-col xl:flex-row w-full gap-10">
+            <div class="flex flex-col w-full gap-10">
+                <h3 class="text-blue-real font-bold text-5xl xl:text-7xl" >
+                    {data.subtitle}
+                </h3>
+                <p class="text-justify text-black-real">
+                    {data.content}
+                </p>
+            </div>
+            <div class="flex flex-row xl:flex-col w-full">
+                {
+                    data.metrics ? data.metrics.map(metric => {
+                        return (
+                            <Metric title={metric.title} subtitle={metric.subtitle} />
+                        )
+                    }) :
+                        null
+                }
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,8 +1,7 @@
 ---
-import content from '../../data/site-home-content.json'
-import type { Lang } from '../../i18n/config.i18n'
-import { getLangFromUrl } from '../../i18n/utils.i18n'
-import Button from '../utils/Button.astro'
+import content from '../../../data/site-home-content.json'
+import type { Lang } from '../../../i18n/config.i18n'
+import Button from '../../utils/Button.astro'
 
 interface Props {
     lang: Lang
@@ -11,9 +10,8 @@ interface Props {
 
 const { lang } = Astro.props
 
-const data = content[lang]
+const data = content[lang].hero
 ---
-
 
 
 <section class="bg-[url('/img/hero/hero_building.png')] bg-cover bg-center w-full h-screen"> 
@@ -25,13 +23,13 @@ const data = content[lang]
         <div class="w-full xl:w-2xl text-left relative mt-30 pl-10">
             <div class="absolute -top-6 left-10 w-24 h-1 bg-red-real rounded-full"></div>  
             <h1 class="text-white-real font-bold text-5xl xl:text-7xl">
-                {data.hero.title}
+                {data.title}
             </h1>
             <p class="text-gray-real text-2xl mt-10">
-                {data.hero.subtitle}
+                {data.subtitle}
             </p>
             <div class="mt-10">
-                <Button color='red-real' label={data.hero.buttonAccion}/>
+                <Button color='red-real' label={data.buttonAccion}/>
             </div>
         </div>
     </div>

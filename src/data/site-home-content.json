@@ -5,6 +5,23 @@
                 "title": "Construido con Autoridad Arquitectónica.",
                 "subtitle": "El referente en excelencia institucional y preservación del capital.",
                 "buttonAccion": "SABER MAS"
+            },
+            "legacy": {
+                "title": "NUESTRO LEGADO",
+                "subtitle": "Un siglo de fortaleza institucional",
+                "content": "Liberty Estate se erige como la piedra angular de la gestión de activos institucionales. Fundada con el mandato de redefinir la excelencia corporativa, hemos sabido adaptarnos a los cambios del mercado global con una precisión inquebrantable. Nuestro legado no se basa únicamente en la superficie, sino en el capital intelectual de los mejores estrategas del mundo.",
+                "metrics": [
+                    {
+                        "id": 1,
+                        "title": "1924",
+                        "subtitle": "FUNDADO"
+                    },
+                    {
+                        "id": 2,
+                        "title": "$42B+",
+                        "subtitle": "ADMINISTRACION DE RECURSOS"
+                    }
+                ]
             }
     },
     "en": {
@@ -13,6 +30,23 @@
                 "title": "Built with Architectural Authority.",
                 "subtitle": "The standard in institutional excellence and capital preservation.",
                 "buttonAccion": "EXECUTIVE OVERVIEW"
+            },
+            "legacy": {
+                "title": "OUR LEGACY",
+                "subtitle": "A Century of Institutional Fortitude",
+                "content": "Liberty Estate stands as the cornerstone of institutional asset management. Established with a mandate to redefine corporate excellence, we have navigated global market shifts with unwavering precision. Our legacy is not just built on square footage, but on the intellectual capital of the world's finest strategists.",
+                "metrics": [
+                    {
+                        "id": 1,
+                        "title": "1924",
+                        "subtitle": "FOUNDATION"
+                    },
+                    {
+                        "id": 2,
+                        "title": "$42B+",
+                        "subtitle": "ASSETS MANAGED"
+                    }
+                ]
             }
     }
 }

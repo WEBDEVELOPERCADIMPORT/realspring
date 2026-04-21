@@ -2,7 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import content from '../../data/site-content.json';
 import type { Lang } from '../../i18n/config.i18n';
-import HeroHome from '../../components/hero/hero_home.astro';
+import HeroHome from '../../components/home/hero/hero_home.astro';
+import Legacy from '../../components/home/sections/Legacy.astro';
 
 const lang = Astro.params.lang as Lang;
 const data = content[lang];
@@ -14,7 +15,7 @@ if (!(lang in content)) {
 
 <Layout title={data.brandName} lang={lang}>
     <HeroHome lang={lang} />
-
+    <Legacy lang={lang} />
 
     <div class="min-h-screen flex flex-col items-center justify-center relative p-6">
         
