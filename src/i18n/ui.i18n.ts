@@ -5,7 +5,7 @@ export const ui = {
             about: 'Nosotros',
         },
         footer: {
-            rights: 'Todos los derechos reservados.',
+            rights: '® Todos los derechos reservados.',
         },
     },
     en: {
@@ -14,7 +14,7 @@ export const ui = {
             about: 'About Us',
         },
         footer: {
-            rights: 'All rights reserved.',
+            rights: '® All rights reserved.',
         },
     },
 } as const;
