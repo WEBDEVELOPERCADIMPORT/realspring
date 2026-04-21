@@ -1,0 +1,49 @@
+---
+import content from '../../../data/site-home-content.json'
+import type { Lang } from '../../../i18n/config.i18n'
+
+interface Props {
+    lang: Lang
+}
+
+
+const { lang } = Astro.props
+
+const data = content[lang].visionary
+---
+
+
+<section id="visionary" class="relative w-full h-auto bg-gray-real overflow-hidden">
+
+    <div class="flex flex-col p-10 mt-20 mb-20 gap-10">
+        <h2 class="relative text-blak-real text-1xl font-alexandria">
+            <div class="w-24 h-2 opacity-30 bg-red-real mb-5"></div>
+            {data.title}
+        </h2>
+        <div class="flex flex-col xl:flex-row w-full gap-10">
+            <div class="flex flex-col w-full gap-10">
+                <div class="w-full grid grid-cols-1 xl:grid-cols-2 gap-10">
+                    {
+                        data.content.paragraphs ? (
+                            data.content.paragraphs.map( paragraph => {
+                                return (
+                                    <div>
+                                        <h2 class="relative opacity-50 text-red-real text-2xl xl:text-center font-alexandria font-medium">
+                                            {paragraph.title}
+                                            <div class="w-24 h-2 opacity-50 bg-blue-real"></div>
+                                        </h2>
+                                        <p class="text-justify text-black-real">
+                                            {paragraph.paragraph}
+                                        </p>
+                                    </div>
+                                )
+                            })
+                        ) : null
+                    }
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>

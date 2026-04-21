@@ -1,6 +1,5 @@
 ---
 import content from '../../../data/site-home-content.json'
-import Metric from '../../utils/Metric.astro'
 import type { Lang } from '../../../i18n/config.i18n'
 
 interface Props {
@@ -19,7 +18,7 @@ const data = content[lang].mandate
     <div class="flex flex-col p-10 mt-20 gap-10">
         <h2 class="relative text-white-real text-1xl font-alexandria font-medium">
             {data.title}
-            <div class="absolute-top-10 left-10 w-24 h-1 bg-red-real rounded-full"></div>  
+            <div class="w-24 h-1 bg-red-real rounded-full"></div>  
         </h2>
         <div class="flex flex-col xl:flex-row w-full gap-10">
             <div class="flex flex-col w-full gap-10">
@@ -27,12 +26,18 @@ const data = content[lang].mandate
                     {data.subtitle}
                 </h3>
                 <div class="w-full grid grid-cols-1 xl:grid-cols-2 gap-10">
-                    <p class="text-justify text-white-real">
-                        {data.content.paragraphs[0].paragraph}
-                    </p>
-                    <p class="text-justify text-white-real">
-                        {data.content.paragraphs[0].paragraph}
-                    </p>
+                    {
+                        data.content.paragraphs ? (
+                            data.content.paragraphs.map( paragraph => {
+
+                                return (
+                                    <p class="text-justify text-white-real">
+                                        {paragraph.paragraph}
+                                    </p>
+                                )
+                            })
+                        ) : null
+                    }
                 </div>
                 
             </div>

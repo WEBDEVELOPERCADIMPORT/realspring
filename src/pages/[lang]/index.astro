@@ -5,6 +5,7 @@ import type { Lang } from '../../i18n/config.i18n';
 import HeroHome from '../../components/home/hero/hero_home.astro';
 import Legacy from '../../components/home/sections/Legacy.astro';
 import Mandate from '../../components/home/sections/Mandate.astro';
+import Visionary from '../../components/home/sections/Visionary.astro';
 
 const lang = Astro.params.lang as Lang;
 const data = content[lang];
@@ -18,7 +19,7 @@ if (!(lang in content)) {
     <HeroHome lang={lang} />
     <Legacy lang={lang} />
     <Mandate lang={lang}/>
-    
+    <Visionary lang={lang}/>
     <div class="min-h-screen flex flex-col items-center justify-center relative p-6">
         
         <div class="relative group mb-20">
