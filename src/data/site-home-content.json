@@ -22,6 +22,22 @@
                         "subtitle": "ADMINISTRACION DE RECURSOS"
                     }
                 ]
+            },
+            "mandate": {
+                "title": "EL MANDATO",
+                "subtitle": "Liderazgo institucional en los mercados globales.",
+                "content": {
+                    "paragraphs": [
+                        {
+                            "id": 1,
+                            "paragraph": "We operate at the intersection of capital and community. Our mission is to engineer high- performing environments that facilitate global commerce. From identifying structural shifts in urban logistics to deploying advanced analytics in suburban growth corridors, Liberty Estate provides the strategic framework for large-scale institutional investment."
+                        },
+                        {
+                            "id": 2,
+                            "paragraph": "Our leadership extends beyond mere management; we provide the architectural blueprints for future economic stability. By prioritizing long-cycle resilience over short- term volatility, we ensure that every initiative under the Liberty banner serves as a pillar of the broader economic landscape."
+                        }
+                    ]
+                }
             }
     },
     "en": {
@@ -47,6 +63,22 @@
                         "subtitle": "ASSETS MANAGED"
                     }
                 ]
+            },
+            "mandate": {
+                "title": "THE MANDATE",
+                "subtitle": "Institutional Leadership in Global Markets.",
+                "content": {
+                    "paragraphs": [
+                        {
+                            "id": 1,
+                            "paragraph": "Operamos en la intersección del capital y la comunidad. Nuestra misión es diseñar entornos de alto rendimiento que faciliten el comercio global. Desde la identificación de cambios estructurales en la logística urbana hasta el despliegue de análisis avanzados en corredores de crecimiento suburbano, Liberty Estate proporciona el marco estratégico para la inversión institucional a gran escala."
+                        },
+                        {
+                            "id": 2,
+                            "paragraph": "Nuestro liderazgo va más allá de la mera gestión; proporcionamos los planos arquitectónicos para la futura estabilidad económica. Al priorizar la resiliencia a largo plazo sobre la volatilidad a corto plazo, garantizamos que cada iniciativa bajo el estandarte de Liberty sirva como pilar del panorama económico general."
+                        }
+                    ]
+                }
             }
     }
 }
