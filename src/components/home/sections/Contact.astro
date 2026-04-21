@@ -23,7 +23,8 @@ const data = content[lang].contact
             {data.subtitle}
         </h3>
         <div class="w-full xl:w-2xl justify-center">
-            <form action="" class="bg-white-real border-l-3 border-l-blue-real flex flex-col gap-3 p-10 shadow-2xl">
+            <form action="" class="relative bg-white-real border-l-3 border-l-blue-real flex flex-col gap-3 p-10 shadow-2xl">
+                <div class="absolute right-0 top-0  w-15 h-15 bg-red-real opacity-10"></div>  
                 <div class="flex flex-col">
                     <label for="name" class="text-blue-real font-bold">
                         {data.form.inputs.name}
