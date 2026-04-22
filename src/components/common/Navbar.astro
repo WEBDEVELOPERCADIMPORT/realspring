@@ -63,10 +63,20 @@ const data = content[lang].nav
 </nav>
 
 <script>
-  const btn = document.getElementById('menu-button');
-  const menu = document.getElementById('nav-movil');
 
-  btn?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
-  });
+  function  navMain(){
+    const btn = document.getElementById('menu-button');
+    const menu = document.getElementById('nav-movil');
+
+    if (btn && menu ){
+        btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+      });
+    }
+  }
+
+
+
+  document.addEventListener('astro:page-load', navMain);
+  
 </script>
