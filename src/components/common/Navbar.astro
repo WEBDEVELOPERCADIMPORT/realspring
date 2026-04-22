@@ -1,23 +1,41 @@
 ---
-import { getLangFromUrl, useTranslations } from '../../i18n/utils.i18n';
+import { getLangFromUrl } from '../../i18n/utils.i18n';
 import ChangeLanguage from '../utils/ChangeLanguage.astro';
+import content from '../../data/nav/site-nav-conten.json'
+import { Menu } from 'lucide-astro'
 
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+
+const data = content[lang].nav
 ---
 
 <nav class="sticky top-0 z-50 w-full px-6 py-4 bg-white  backdrop-blur-md border-b border-gray-100">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
     
-    <a href={`/${lang}/`} class="flex items-center gap-2 transition hover:opacity-80 w-30 ">
-      <img class="w-full" src="/logo_real.png" class="w-10 h-10 object-contain" alt="Logo del sitio" />
-    </a>
+    <div class="flex flex-row justify-center items-center">
+      <button id="menu-button" class="flex justify-center items-center xl:hidden text-blue-real focus:outline-none">
+        <Menu />
+      </button>
+      <a href={`/${lang}/`} class="flex items-center gap-2 transition hover:opacity-80 w-30 ">
+        <img class="w-full" src="/logo_real.png" class="w-10 h-10 object-contain" alt="Logo del sitio" />
+      </a>
+    </div>
 
     <div class="flex items-center gap-6 sm:gap-8">
       
-      <ul class="flex items-center gap-6 text-sm font-medium text-gray-600">
-        
-        
+      <ul class="items-center gap-6 text-sm font-medium text-gray-600 hidden xl:flex">
+        {
+          data ? data.map( item => {
+
+            return (
+              <a href={item.path}>
+                <li>
+                  {item.section}
+                </li>
+              </a>
+            )
+          }) : null
+        }
       </ul>
 
       <div class="hidden sm:block w-px h-5 bg-gray-200"></div>
@@ -26,4 +44,29 @@ const t = useTranslations(lang);
 
     </div>
   </div>
+  <div id="nav-movil"  class="hidden xl:hidden transition-all duration-9000 ease-in-out">
+    <ul class="flex  flex-col items-end gap-5 text-sm font-medium text-gray-600 pt-5">
+        {
+          data ? data.map( item => {
+
+            return (
+              <a href={item.path}>
+                <li>
+                  {item.section}
+                </li>
+              </a>
+            )
+          }) : null
+        }
+      </ul>
+  </div>
 </nav>
+
+<script>
+  const btn = document.getElementById('menu-button');
+  const menu = document.getElementById('nav-movil');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

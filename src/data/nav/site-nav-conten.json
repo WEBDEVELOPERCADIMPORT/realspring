@@ -1,0 +1,26 @@
+{
+    "es": {
+        "nav": [
+            {
+                "section": "Inicio",
+                "path": "/es/#home"
+            },
+            {
+                "section": "Contacto",
+                "path": "/es/#contact"
+            }
+        ]
+    },
+    "en": {
+        "nav": [
+            {
+                "section": "Home",
+                "path": "/en/#home"
+            },
+            {
+                "section": "Contact",
+                "path": "/en/#contact"
+            }
+        ]
+    }
+}
