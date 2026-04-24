@@ -12,6 +12,11 @@
                     },
                     "buttonAccion": "SUBMIT REQUEST"
                 }
+            
+        },
+        "projects": {
+            "title": "Nuestros Proyectos",
+            "subtitle": "NUEVA LISTA"
         }
     },
     "en": {
@@ -19,6 +24,10 @@
         "filters":{
             "title": "Check All",
             "subtitle": "Our Projects"
+        },
+        "projects": {
+            "title": "Our Projects",
+            "subtitle": "NEW LISTINGS"
         }
     }
 }

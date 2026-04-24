@@ -1,0 +1,55 @@
+---
+import content from '../../../data/site-projects-content.json'
+import type { Lang } from '../../../i18n/config.i18n'
+import CardProject from '../../utils/CardProject.astro'
+
+interface Props {
+    lang: Lang
+}
+
+
+const { lang } = Astro.props
+
+const data = content[lang].projects
+---
+
+
+<section id="projects"  class="bg-center w-full"> 
+
+    <div class="flex flex-col p-10 gap-10 justify-start h-full bg-white-real">   
+        <div class="relative flex w-full overflow-auto scroll-">
+            <ul class="flex gap-0 justify-between w-full">
+                <li class="relative w-full justify-center flex p-2 text-blue-real font-bold">
+                    Houses
+                    <span class="absolute bottom-0 left-0 h-0.5 bg-red-real transition-all duration-300 w-full"></span>
+                </li>
+                <li class="relative w-full justify-center flex p-2">
+                    Apartments
+                    <span class="absolute bottom-0 left-0 h-0.5 bg-gray-real transition-all duration-300 w-full"></span>
+                </li>
+                <li class="relative w-full justify-center flex p-2">
+                    Commercial
+                    <span class="absolute bottom-0 left-0 h-0.5 bg-gray-real transition-all duration-300 w-full"></span>
+                </li>
+                <li class="relative w-full justify-center flex p-2">
+                    Businesses
+                    <span class="absolute bottom-0 left-0 h-0.5 bg-gray-real transition-all duration-300 w-full"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col gap-2 w-full text-left relative">
+            <h2 class="text-red-real text-1xl font-alexandria font-bold">
+                {data.subtitle}
+            </h2>
+            <h1 class="text-black-real font-bold text-4xl xl:text-6xl mb-2">
+                {data.title}
+            </h1>
+            <div class="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full p-3 gap-5">
+                <CardProject />
+                <CardProject />
+                <CardProject />
+            </div>
+        </div>
+    </div>
+
+</section>
