@@ -1,0 +1,16 @@
+---
+import type { Lang } from "../../../i18n/config.i18n";
+import Layout from "../../../layouts/Layout.astro";
+import content from "../../../data/site-projects-content.json"
+import Filters from "../../../components/projects/sections/Filters.astro";
+
+const lang = Astro.params.lang as Lang
+
+const data = content[lang]
+
+---
+
+<Layout title={data.brandName} lang={lang}>
+    <Filters lang={lang}/>
+
+</Layout>

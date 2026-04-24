@@ -1,0 +1,24 @@
+{
+    "es":{
+        "brandName": "REALSPRING - PROYECTOS ",
+        "filters":{
+            "title": "Revisa Todos",
+            "subtitle": "Nuestros Proyectos",
+            "form":{
+                    "inputs":{
+                        "searh": "",
+                        "email": "Email",
+                        "description": "We write"
+                    },
+                    "buttonAccion": "SUBMIT REQUEST"
+                }
+        }
+    },
+    "en": {
+        "brandName": "REALSPRING - PROJECTS ",
+        "filters":{
+            "title": "Check All",
+            "subtitle": "Our Projects"
+        }
+    }
+}

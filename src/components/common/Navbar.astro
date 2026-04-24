@@ -28,9 +28,10 @@ const data = content[lang].nav
           data ? data.map( item => {
 
             return (
-              <a href={item.path}>
+              <a href={item.path} class="relative group py-2">
                 <li>
                   {item.section}
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-real transition-all duration-300 group-hover:w-full"></span>
                 </li>
               </a>
             )
@@ -50,9 +51,10 @@ const data = content[lang].nav
           data ? data.map( item => {
 
             return (
-              <a href={item.path}>
-                <li>
+              <a href={item.path} class="relative group py-2">
+                <li >
                   {item.section}
+                  <span class="absolute bottom-0 left-0 h-0.5 bg-blue-real transition-all duration-300 w-full"></span>
                 </li>
               </a>
             )

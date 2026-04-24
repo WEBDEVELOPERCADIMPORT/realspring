@@ -1,0 +1,38 @@
+---
+import content from '../../../data/site-projects-content.json'
+import type { Lang } from '../../../i18n/config.i18n'
+import Button from '../../utils/Button.astro'
+import Input from '../../utils/Input.astro'
+import { Search  } from 'lucide-astro'
+
+interface Props {
+    lang: Lang
+}
+
+
+const { lang } = Astro.props
+
+const data = content[lang].filters
+---
+
+
+<section id="filters"  class="bg-center w-full h-screen"> 
+
+    <div class="flex flex-col p-10 justify-start h-full bg-blue-real">        
+        <div class="w-full xl:w-2xl text-left relative">
+            <h1 class="text-white-real font-bold text-4xl xl:text-7xl">
+                {data.title}
+            </h1>
+            <h2 class="text-red-real font-bold text-4xl xl:text-7xl">
+                {data.subtitle}
+            </h2>
+            <div class="mt-5">
+                <Input icon={Search} placeholder="hol" ref='searh' />
+            </div>
+            <div class="mt-10">
+                <Button color='red-real'/>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -3,11 +3,15 @@
         "nav": [
             {
                 "section": "Inicio",
-                "path": "/es/#home"
+                "path": "/es/"
             },
             {
                 "section": "Contacto",
                 "path": "/es/#contact"
+            },
+            {
+                "section": "Projects",
+                "path": "/es/projects"
             }
         ]
     },
@@ -15,11 +19,15 @@
         "nav": [
             {
                 "section": "Home",
-                "path": "/en/#home"
+                "path": "/en/"
             },
             {
                 "section": "Contact",
                 "path": "/en/#contact"
+            },
+            {
+                "section": "Proyectos",
+                "path": "/en/projects"
             }
         ]
     }

@@ -2,6 +2,8 @@
 import content from '../../../data/site-home-content.json'
 import type { Lang } from '../../../i18n/config.i18n'
 import Button from '../../utils/Button.astro'
+import Input from '../../utils/Input.astro'
+import Textarea from '../../utils/Textarea.astro'
 
 interface Props {
     lang: Lang
@@ -25,25 +27,9 @@ const data = content[lang].contact
         <div class="w-full xl:w-2xl justify-center">
             <form action="" class="relative bg-white-real border-l-3 border-l-blue-real flex flex-col gap-3 p-10 shadow-2xl">
                 <div class="absolute right-0 top-0  w-15 h-15 bg-red-real opacity-10"></div>  
-                <div class="flex flex-col">
-                    <label for="name" class="text-blue-real font-bold">
-                        {data.form.inputs.name}
-                    </label>
-                    <input id="name" name="name" type="text" class="bg-gray-real inset-shadow-sm p-2">
-                </div>
-                <div class="flex flex-col">
-                    <label for="email" class="text-blue-real font-bold">
-                        {data.form.inputs.email}
-                    </label>
-                    <input id="email" name="email" type="email" class="bg-gray-real inset-shadow-sm p-2">
-                </div>
-                <div class="flex flex-col">
-                    <label for="description" class="text-blue-real font-bold">
-                        {data.form.inputs.description}
-                    </label>
-                    <textarea id="description" name="description" rows="4" class="bg-gray-real inset-shadow-sm p-2">
-                    </textarea>
-                </div>
+                <Input label={data.form.inputs.name} ref='name' type={'text'}  />
+                <Input label={data.form.inputs.email} ref='email' type={'text'}  />
+                <Textarea label={data.form.inputs.description} ref='email' rows={4} />
                 <div class="flex flex-col">
                     <Button color='red-real' labelColor='white-real' label={data.form.buttonAccion} />
                 </div>
