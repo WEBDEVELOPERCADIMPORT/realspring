@@ -7,7 +7,7 @@ export interface Amenities {
     garages: number;
 }
 
-export type PropertyType = 'HOUSE' | 'PENTHOUSE' | 'APARTMENT' | 'LOFT';
+export type PropertyType = 'HOUSE' | 'APARTMENT' | 'COMMERCIAL' | 'BUSINESESS';
 
 export interface Project {
     name: string;

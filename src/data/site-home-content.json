@@ -90,18 +90,6 @@
                         }
                     ]
                 }
-            },
-            "contact": {
-                "title": "¿Tiene alguna pregunta?",
-                "subtitle": "Escríbanos para recibir información",
-                "form": {
-                    "inputs": {
-                        "name": "Nombre Completo",
-                        "email": "Correo Electrónico",
-                        "description": "Escríbenos tu mensaje"
-                    },
-                    "buttonAccion": "ENVIAR SOLICITUD"
-                }
             }
     },
     "en": {
@@ -194,18 +182,6 @@
                             "paragraph": "Leveraging digital-first intelligence to manage a $42B+ portfolio of essential infrastructure and commerce."
                         }
                     ]
-                }
-            },
-            "contact": {
-                "title": "Do you have any questions?",
-                "subtitle": "Write to us to receive information",
-                "form":{
-                    "inputs":{
-                        "name": "Full Name",
-                        "email": "Email",
-                        "description": "We write"
-                    },
-                    "buttonAccion": "SUBMIT REQUEST"
                 }
             }
     }

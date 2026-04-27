@@ -1,24 +1,30 @@
 ---
 import { BedDouble, MapPin } from "lucide-astro";
+import type { Project } from "../../domains/project.interface";
 
+interface Props {
+    project: Project;
+}
+
+const project = Astro.props.project
 
 ---
 
 
 <div class="w-full flex flex-col">
     <div class="flex w-full object-cover relative">
-        <img src="/img/projects/project_1.png" class="w-full" alt="">
-        <div class="absolute right-0 bottom-0 bg-white-real text-blue-real font-bold text-2xl shadow-2xl p-3 ">
-            $1,240,000.00
+        <img src={project.image} class="w-full" alt="">
+        <div class="absolute right-0 bottom-0 bg-white-real text-blue-real font-bold text-2xl p-3 ">
+            ${project.price}
         </div>
     </div>
     <div class="flex flex-col w-full gap-3 border-l-3 border-blue-real p-2">
         <h3 class="text-black-real font-bold text-2xl">
-            Lexington Manor Estate
+            {project.name}
         </h3>
         <p class="flex flex-row items-center">
             <MapPin size={15} />
-            Arlington, VA
+            {project.location}
         </p>
         <div class="flex justify-between items-center">
             

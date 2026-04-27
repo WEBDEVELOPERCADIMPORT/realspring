@@ -1,0 +1,372 @@
+{
+    "projects": [
+        {
+            "name": "Skyline Heights Penthouse",
+            "location": "Miami, FL",
+            "type": "house",
+            "image": "/img/projects/project_1.png",
+            "price": 2450000.00,
+            "amenities": [
+                {
+                    "beds": 3,
+                    "bathrooms": 3.5,
+                    "m2": 450,
+                    "levels": 1,
+                    "garages": 2
+                }
+            ]
+        },
+        {
+            "name": "Oak Ridge Family Villa",
+            "location": "Austin, TX",
+            "type": "house",
+            "image": "https://casasparaconstruir.com/projetos/141/04.jpg",
+            "price": 875000.00,
+            "amenities": [
+                {
+                    "beds": 5,
+                    "bathrooms": 4,
+                    "m2": 320,
+                    "levels": 2,
+                    "garages": 3
+                }
+            ]
+        },
+        {
+            "name": "Azure Bay Apartment",
+            "location": "San Diego, CA",
+            "type": "apartment",
+            "image": "https://i.pinimg.com/736x/92/6a/59/926a5969197f87453029caf45c261656.jpg",
+            "price": 540000.00,
+            "amenities": [
+                {
+                    "beds": 2,
+                    "bathrooms": 2,
+                    "m2": 115,
+                    "levels": 1,
+                    "garages": 1
+                }
+            ]
+        },
+        {
+            "name": "Emerald Garden Estate",
+            "location": "Seattle, WA",
+            "type": "house",
+            "image": "https://i.pinimg.com/originals/c0/56/ed/c056ed836b989ef5b6c2f236a5a34365.jpg",
+            "price": 1100000.00,
+            "amenities": [
+                {
+                    "beds": 4,
+                    "bathrooms": 3,
+                    "m2": 280,
+                    "levels": 2,
+                    "garages": 2
+                }
+            ]
+        },
+        {
+            "name": "Urban Loft District",
+            "location": "Brooklyn, NY",
+            "type": "businesess",
+            "image": "https://www.chirripobienesraices.com/prop_images/10355/a55f2cfa-4e17-4f46-8cec-678690ccebe3.jpeg",
+            "price": 920000.00,
+            "amenities": [
+                {
+                    "beds": 1,
+                    "bathrooms": 1,
+                    "m2": 95,
+                    "levels": 2,
+                    "garages": 0
+                }
+            ]
+        },
+        {
+            "name": "Golden Valley Manor",
+            "location": "Phoenix, AZ",
+            "type": "house",
+            "image": "https://cdn1.infocasas.com.uy/repo/img/af380a3e518a06433cbd3ae4a7869c24e079b3d4.jpg",
+            "price": 680000.00,
+            "amenities": [
+                {
+                    "beds": 4,
+                    "bathrooms": 2.5,
+                    "m2": 210,
+                    "levels": 1,
+                    "garages": 2
+                }
+            ]
+        },
+        {
+            "name": "Summit Corporate Center",
+            "location": "Chicago, IL",
+            "type": "commercial",
+            "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+            "price": 4200000.00,
+            "amenities": [
+                {
+                    "beds": 0,
+                    "bathrooms": 10,
+                    "m2": 1200,
+                    "levels": 5,
+                    "garages": 20
+                }
+            ]
+        },
+        {
+            "name": "Sunset Ridge Apartments",
+            "location": "Denver, CO",
+            "type": "apartment",
+            "image": "https://storage.googleapis.com/assets-us-east4-propilatam/pre-sales/projects/abecbe0f-db20-4af5-a75d-9b3a767b96be/cover/1763480706317.jpg",
+            "price": 310000.00,
+            "amenities": [
+                {
+                    "beds": 2,
+                    "bathrooms": 1,
+                    "m2": 85,
+                    "levels": 1,
+                    "garages": 1
+                }
+            ]
+        },
+        {
+            "name": "Tech Hub Innovation Park",
+            "location": "Palo Alto, CA",
+            "type": "businesess",
+            "image": "https://images.unsplash.com/photo-1497366216548-37526070297c",
+            "price": 12500000.00,
+            "amenities": [
+                {
+                    "beds": 0,
+                    "bathrooms": 15,
+                    "m2": 3500,
+                    "levels": 3,
+                    "garages": 50
+                }
+            ]
+        },
+        {
+            "name": "Maplewood Suburban Home",
+            "location": "Portland, OR",
+            "type": "house",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ9TgJ3s_8vKqA3TKUK4Z_CcMeNG6qhpsgow&s",
+            "price": 725000.00,
+            "amenities": [
+                {
+                    "beds": 3,
+                    "bathrooms": 2,
+                    "m2": 195,
+                    "levels": 2,
+                    "garages": 2
+                }
+            ]
+        },
+        {
+            "name": "Skyline Heights Penthouse",
+            "location": "Miami, FL",
+            "type": "house",
+            "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&h=600",
+            "price": 2450000.00,
+            "amenities": [
+                {
+                    "beds": 3,
+                    "bathrooms": 3.5,
+                    "m2": 450,
+                    "levels": 1,
+                    "garages": 2
+                }
+            ]
+        },
+        {
+            "name": "Oak Ridge Family Villa",
+            "location": "Austin, TX",
+            "type": "house",
+            "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=600",
+            "price": 875000.00,
+            "amenities": [
+                {
+                    "beds": 5,
+                    "bathrooms": 4,
+                    "m2": 320,
+                    "levels": 2,
+                    "garages": 3
+                }
+            ]
+        },
+        {
+            "name": "Azure Bay Apartment",
+            "location": "San Diego, CA",
+            "type": "apartment",
+            "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&h=600",
+            "price": 540000.00,
+            "amenities": [
+                {
+                    "beds": 2,
+                    "bathrooms": 2,
+                    "m2": 115,
+                    "levels": 1,
+                    "garages": 1
+                }
+            ]
+        },
+        {
+            "name": "Beacon Plaza Center",
+            "location": "Boston, MA",
+            "type": "commercial",
+            "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&h=600",
+            "price": 12500000.00,
+            "amenities": [
+                {
+                    "beds": 0,
+                    "bathrooms": 12,
+                    "m2": 2400,
+                    "levels": 4,
+                    "garages": 45
+                }
+            ]
+        },
+        {
+            "name": "Horizon Tech Park",
+            "location": "San Francisco, CA",
+            "type": "businesess",
+            "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&h=600",
+            "price": 18900000.00,
+            "amenities": [
+                {
+                    "beds": 0,
+                    "bathrooms": 20,
+                    "m2": 5200,
+                    "levels": 6,
+                    "garages": 100
+                }
+            ]
+        },
+        {
+            "name": "Silver Lake Residences",
+            "location": "Los Angeles, CA",
+            "type": "apartment",
+            "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&h=600",
+            "price": 3200000.00,
+            "amenities": [
+                {
+                    "beds": 12,
+                    "bathrooms": 10,
+                    "m2": 850,
+                    "levels": 3,
+                    "garages": 8
+                }
+            ]
+        },
+        {
+            "name": "Maplewood Estate",
+            "location": "Portland, OR",
+            "type": "house",
+            "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&h=600",
+            "price": 980000.00,
+            "amenities": [
+                {
+                    "beds": 4,
+                    "bathrooms": 3,
+                    "m2": 260,
+                    "levels": 2,
+                    "garages": 2
+                }
+            ]
+        },
+        {
+            "name": "Vantage Point Offices",
+            "location": "Dallas, TX",
+            "type": "commercial",
+            "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&h=600",
+            "price": 5600000.00,
+            "amenities": [
+                {
+                    "beds": 0,
+                    "bathrooms": 8,
+                    "m2": 1500,
+                    "levels": 2,
+                    "garages": 30
+                }
+            ]
+        },
+        {
+            "name": "The Grand Atrium",
+            "location": "Chicago, IL",
+            "type": "businesess",
+            "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&h=600",
+            "price": 22000000.00,
+            "amenities": [
+                {
+                    "beds": 0,
+                    "bathrooms": 25,
+                    "m2": 7800,
+                    "levels": 10,
+                    "garages": 150
+                }
+            ]
+        },
+        {
+            "name": "Riverside Quarters",
+            "location": "London, UK",
+            "type": "apartment",
+            "image": "https://thermohouse.ie/wp-content/uploads/2019/04/hero-image.jpg",
+            "price": 4150000.00,
+            "amenities": [
+                {
+                    "beds": 8,
+                    "bathrooms": 8,
+                    "m2": 600,
+                    "levels": 4,
+                    "garages": 6
+                }
+            ]
+        },
+        {
+            "name": "Desert Rose Mansion",
+            "location": "Scottsdale, AZ",
+            "type": "house",
+            "image": "https://images.unsplash.com/photo-1475855581690-80accde3ae2b?auto=format&fit=crop&w=1200&h=600",
+            "price": 1350000.00,
+            "amenities": [
+                {
+                    "beds": 5,
+                    "bathrooms": 4.5,
+                    "m2": 380,
+                    "levels": 1,
+                    "garages": 4
+                }
+            ]
+        },
+        {
+            "name": "Nautilus Logistics Hub",
+            "location": "Savannah, GA",
+            "type": "commercial",
+            "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&h=600",
+            "price": 8900000.00,
+            "amenities": [
+                {
+                    "beds": 0,
+                    "bathrooms": 6,
+                    "m2": 4500,
+                    "levels": 1,
+                    "garages": 20
+                }
+            ]
+        },
+        {
+            "name": "Starlight Suites",
+            "location": "Las Vegas, NV",
+            "type": "apartment",
+            "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&h=600",
+            "price": 2750000.00,
+            "amenities": [
+                {
+                    "beds": 6,
+                    "bathrooms": 6,
+                    "m2": 420,
+                    "levels": 2,
+                    "garages": 10
+                }
+            ]
+        }
+    ]
+}

@@ -4,6 +4,7 @@ import Navbar from '../components/common/Navbar.astro';
 import Footer from '../components/common/Footer.astro';
 import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
+import Contact from '../components/common/Contact.astro';
 
 interface Props {
 	title: string;
@@ -38,6 +39,7 @@ const { title, lang, description = "Web informativa coorporativa" } = Astro.prop
 			
 			<slot /> 
 		</main>
+		<Contact lang={lang} />
 		<Footer lang={lang} />
 	</body>
 </html>

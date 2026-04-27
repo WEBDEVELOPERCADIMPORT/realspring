@@ -16,7 +16,29 @@
         },
         "projects": {
             "title": "Nuestros Proyectos",
-            "subtitle": "NUEVA LISTA"
+            "subtitle": "NUEVA LISTA",
+            "categories": [
+                {
+                    "category": "All",
+                    "path": "all"
+                },
+                {
+                    "category": "House",
+                    "path": "house"
+                },
+                {
+                    "category": "Apartment",
+                    "path": "apartment"
+                },
+                {
+                    "category": "Commercial",
+                    "path": "commercial"
+                },
+                {
+                    "category": "Businesses",
+                    "path": "businesses"
+                }
+            ]
         }
     },
     "en": {
@@ -27,7 +49,29 @@
         },
         "projects": {
             "title": "Our Projects",
-            "subtitle": "NEW LISTINGS"
+            "subtitle": "NEW LISTINGS",
+            "categories": [
+            {
+                "category": "Todos",
+                "path": "all"
+            },
+            {
+                "category": "Casas",
+                "path": "house"
+            },
+            {
+                "category": "Apartamentos",
+                "path": "apartment"
+            },
+            {
+                "category": "Comercios",
+                "path": "commercial"
+            },
+            {
+                "category": "Negocios",
+                "path": "businesses"
+            }
+        ]
         }
     }
 }

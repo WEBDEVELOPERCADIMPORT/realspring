@@ -1,9 +1,9 @@
 ---
-import content from '../../../data/site-home-content.json'
-import type { Lang } from '../../../i18n/config.i18n'
-import Button from '../../utils/Button.astro'
-import Input from '../../utils/Input.astro'
-import Textarea from '../../utils/Textarea.astro'
+import type { Lang } from '../../i18n/config.i18n'
+import { useTranslations } from '../../i18n/utils.i18n'
+import Button from '../utils/Button.astro'
+import Input from '../utils/Input.astro'
+import Textarea from '../utils/Textarea.astro'
 
 interface Props {
     lang: Lang
@@ -11,7 +11,7 @@ interface Props {
 
 const { lang } = Astro.props
 
-const data = content[lang].contact
+const data = useTranslations(lang).contact
 ---
 
 
@@ -37,4 +37,4 @@ const data = content[lang].contact
         </div>
     </div>
 
-</section
+</section>

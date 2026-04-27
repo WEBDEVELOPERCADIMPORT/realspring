@@ -7,7 +7,6 @@ import Legacy from '../../components/home/sections/Legacy.astro';
 import Mandate from '../../components/home/sections/Mandate.astro';
 import Visionary from '../../components/home/sections/Visionary.astro';
 import History from '../../components/home/sections/History.astro';
-import Contact from '../../components/home/sections/Contact.astro'
 
 const lang = Astro.params.lang as Lang;
 const data = content[lang];
@@ -50,5 +49,4 @@ if (!(lang in content)) {
             ® Central America
         </h1>
     </div>
-    <Contact lang={lang}/>
 </Layout>

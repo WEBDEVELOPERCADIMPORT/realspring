@@ -7,7 +7,7 @@
             },
             {
                 "section": "Contacto",
-                "path": "/es/#contact"
+                "path": "#contact"
             },
             {
                 "section": "Proyectos",
@@ -23,7 +23,7 @@
             },
             {
                 "section": "Contact",
-                "path": "/en/#contact"
+                "path": "#contact"
             },
             {
                 "section": "Projects",

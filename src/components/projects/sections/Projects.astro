@@ -7,13 +7,13 @@ import CardProject from '../../utils/CardProject.astro'
 interface Props {
     lang: Lang
     projects: Project[]
+    categoryName: string
 }
 
 
-const { lang, projects } = Astro.props
+const { lang, projects, categoryName } = Astro.props
 
 const data = content[lang].projects
-
 ---
 
 
@@ -22,22 +22,29 @@ const data = content[lang].projects
     <div class="flex flex-col p-10 gap-10 justify-start h-full bg-white-real">   
         <div class="relative flex w-full overflow-auto scroll-">
             <ul class="flex gap-0 justify-between w-full">
-                <li class="relative w-full justify-center flex p-2 text-blue-real font-bold">
-                    Houses
-                    <span class="absolute bottom-0 left-0 h-0.5 bg-red-real transition-all duration-300 w-full"></span>
-                </li>
-                <li class="relative w-full justify-center flex p-2">
-                    Apartments
-                    <span class="absolute bottom-0 left-0 h-0.5 bg-gray-real transition-all duration-300 w-full"></span>
-                </li>
-                <li class="relative w-full justify-center flex p-2">
-                    Commercial
-                    <span class="absolute bottom-0 left-0 h-0.5 bg-gray-real transition-all duration-300 w-full"></span>
-                </li>
-                <li class="relative w-full justify-center flex p-2">
-                    Businesses
-                    <span class="absolute bottom-0 left-0 h-0.5 bg-gray-real transition-all duration-300 w-full"></span>
-                </li>
+                {
+                    data.categories && data.categories.map( category => {
+                        const path = `/${lang}/projects?category=${category.path}`
+                        if ( categoryName == category.path) {
+                            return (    
+                                <a href={path} class="w-full">
+                                    <li class="relative w-full justify-center flex p-2 text-blue-real font-bold">
+                                        {category.category}
+                                        <span class="absolute bottom-0 left-0 h-0.5 bg-red-real transition-all duration-300 w-full"></span>
+                                    </li>
+                                </a>
+                            )
+                        }
+                        return(
+                            <a href={path} class="w-full">
+                                    <li class="relative w-full justify-center flex p-2 ">
+                                        {category.category}
+                                        <span class="absolute bottom-0 left-0 h-0.5 bg-gray-real transition-all duration-300 w-full"></span>
+                                    </li>
+                            </a>
+                        )
+                    })
+                }
             </ul>
         </div>
         <div class="flex flex-col gap-2 w-full text-left relative">
@@ -51,7 +58,7 @@ const data = content[lang].projects
                 {
                     projects && projects.map( project => {
                         return (
-                                <CardProject />
+                                <CardProject project={project} />
                         )
                     } )
                 }
