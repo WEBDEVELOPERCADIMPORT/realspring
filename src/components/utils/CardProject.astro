@@ -1,6 +1,7 @@
 ---
 import { BedDouble, MapPin } from "lucide-astro";
 import type { Project } from "../../domains/project.interface";
+import { getIconAmenities } from "../projects/components/getIconAmenities";
 
 interface Props {
     project: Project;
@@ -10,10 +11,9 @@ const project = Astro.props.project
 
 ---
 
-
-<div class="w-full flex flex-col">
+<div class="w-full flex flex-col hover:shadow-2xl transition-all duration-300">
     <div class="flex w-full object-cover relative">
-        <img src={project.image} class="w-full" alt="">
+        <img src={project.image} class="w-full transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl" alt="">
         <div class="absolute right-0 bottom-0 bg-white-real text-blue-real font-bold text-2xl p-3 ">
             ${project.price}
         </div>
@@ -27,26 +27,19 @@ const project = Astro.props.project
             {project.location}
         </p>
         <div class="flex justify-between items-center">
-            
-            <div class="text-blue-real font-bold flex gap-2 items-center" >
-                <BedDouble size={20} />
-                <h4 class="text-black-real font-bold">
-                    5 Beds
-                </h4>
-            </div>
-            <div class="text-blue-real font-bold flex gap-2 items-center" >
-                <BedDouble size={20} />
-                <h4 class="text-black-real font-bold">
-                    5 Beds
-                </h4>
-            </div>
-            <div class="text-blue-real font-bold flex gap-2 items-center justify-center" >
-                <BedDouble size={20} />
-                <h4 class="text-black-real font-bold">
-                    5 Beds
-                </h4>
-            </div>
+            {
+                project.amenities && project.amenities.slice(0,3).map( item => {
+                    const itemIcon = getIconAmenities(item.key)
+                    return (
+                        <div class="text-blue-real font-bold flex gap-2 items-center" >
+                            <itemIcon.icon size={20} />
+                            <h4 class="text-black-real font-bold">
+                                {item.amount} {itemIcon.label}
+                            </h4>
+                        </div>
+                    )
+                })
+            }
         </div>
     </div>
 </div>
-        

@@ -1,10 +1,7 @@
 
 export interface Amenities {
-    beds: number;
-    bathrooms: number;
-    m2: number;
-    levels: number;
-    garages: number;
+    key: string;
+    amount: number
 }
 
 export type PropertyType = 'HOUSE' | 'APARTMENT' | 'COMMERCIAL' | 'BUSINESESS';
