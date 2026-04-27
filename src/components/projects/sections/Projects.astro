@@ -1,16 +1,19 @@
 ---
 import content from '../../../data/site-projects-content.json'
+import type { Project } from '../../../domains/project.interface'
 import type { Lang } from '../../../i18n/config.i18n'
 import CardProject from '../../utils/CardProject.astro'
 
 interface Props {
     lang: Lang
+    projects: Project[]
 }
 
 
-const { lang } = Astro.props
+const { lang, projects } = Astro.props
 
 const data = content[lang].projects
+
 ---
 
 
@@ -45,9 +48,13 @@ const data = content[lang].projects
                 {data.title}
             </h1>
             <div class="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full p-3 gap-5">
-                <CardProject />
-                <CardProject />
-                <CardProject />
+                {
+                    projects && projects.map( project => {
+                        return (
+                                <CardProject />
+                        )
+                    } )
+                }
             </div>
         </div>
     </div>

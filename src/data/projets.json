@@ -1,0 +1,100 @@
+{
+    "projects": [
+        {
+            "name": "Skyline Heights Penthouse",
+            "location": "Miami, FL",
+            "type": "PENTHOUSE",
+            "image": "/img/projects/project_1.png",
+            "price": 2450000.00,
+            "amenities": [
+                {
+                    "beds": 3,
+                    "bathrooms": 3.5,
+                    "m2": 450,
+                    "levels": 1,
+                    "garages": 2
+                }
+            ]
+        },
+        {
+            "name": "Oak Ridge Family Villa",
+            "location": "Austin, TX",
+            "type": "HOUSE",
+            "image": "https://casasparaconstruir.com/projetos/141/04.jpg",
+            "price": 875000.00,
+            "amenities": [
+                {
+                    "beds": 5,
+                    "bathrooms": 4,
+                    "m2": 320,
+                    "levels": 2,
+                    "garages": 3
+                }
+            ]
+        },
+        {
+            "name": "Azure Bay Apartment",
+            "location": "San Diego, CA",
+            "type": "APARTMENT",
+            "image": "https://i.pinimg.com/736x/92/6a/59/926a5969197f87453029caf45c261656.jpg",
+            "price": 540000.00,
+            "amenities": [
+                {
+                    "beds": 2,
+                    "bathrooms": 2,
+                    "m2": 115,
+                    "levels": 1,
+                    "garages": 1
+                }
+            ]
+        },
+        {
+            "name": "Emerald Garden Estate",
+            "location": "Seattle, WA",
+            "type": "HOUSE",
+            "image": "https://i.pinimg.com/originals/c0/56/ed/c056ed836b989ef5b6c2f236a5a34365.jpg",
+            "price": 1100000.00,
+            "amenities": [
+                {
+                    "beds": 4,
+                    "bathrooms": 3,
+                    "m2": 280,
+                    "levels": 2,
+                    "garages": 2
+                }
+            ]
+        },
+        {
+            "name": "Urban Loft District",
+            "location": "Brooklyn, NY",
+            "type": "LOFT",
+            "image": "https://www.chirripobienesraices.com/prop_images/10355/a55f2cfa-4e17-4f46-8cec-678690ccebe3.jpeg",
+            "price": 920000.00,
+            "amenities": [
+                {
+                    "beds": 1,
+                    "bathrooms": 1,
+                    "m2": 95,
+                    "levels": 2,
+                    "garages": 0
+                }
+            ]
+        },
+        {
+            "name": "Golden Valley Manor",
+            "location": "Phoenix, AZ",
+            "type": "HOUSE",
+            "image": "https://cdn1.infocasas.com.uy/repo/img/af380a3e518a06433cbd3ae4a7869c24e079b3d4.jpg",
+            "price": 680000.00,
+            "amenities": [
+                {
+                    "beds": 4,
+                    "bathrooms": 2.5,
+                    "m2": 210,
+                    "levels": 1,
+                    "garages": 2
+                }
+            ]
+        }
+    ]
+}

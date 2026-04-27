@@ -1,10 +1,6 @@
-// src/actions/index.ts
 import { defineAction } from 'astro:actions';
+import { getProjects } from './projects/project.action';
 
 export const server = {
-    miAccion: defineAction({
-        handler: async (input) => {
-            return { success: true };
-        },
-    }),
+    getProjects
 };
