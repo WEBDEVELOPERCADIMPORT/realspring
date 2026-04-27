@@ -36,7 +36,7 @@
                 },
                 {
                     "category": "Businesses",
-                    "path": "businesses"
+                    "path": "businesess"
                 }
             ]
         }
@@ -69,7 +69,7 @@
             },
             {
                 "category": "Negocios",
-                "path": "businesses"
+                "path": "businesess"
             }
         ]
         }
