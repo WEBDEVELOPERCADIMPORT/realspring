@@ -1,4 +1,5 @@
 ---
+import type { string } from 'astro:schema'
 import content from '../../../data/site-projects-content.json'
 import type { Lang } from '../../../i18n/config.i18n'
 import Button from '../../utils/Button.astro'
@@ -7,10 +8,12 @@ import { Search  } from 'lucide-astro'
 
 interface Props {
     lang: Lang
+    categoryName: string
+    searhName: string
 }
 
 
-const { lang } = Astro.props
+const { lang, categoryName, searhName } = Astro.props
 
 const data = content[lang].filters
 ---
@@ -27,10 +30,12 @@ const data = content[lang].filters
                 {data.subtitle}
             </h2>
             <div class="mt-5">
-                <Input icon={Search} placeholder="hol" ref='searh' />
-            </div>
-            <div class="mt-10">
-                <Button color='red-real' />
+
+                <form action="" class="w-full flex  gap-2.5 items-center">
+                    <input type="hidden" name="category" value={categoryName} />
+                    <Input icon={Search} placeholder={data.form.inputs.search.placeholder} ref='search' value={searhName} />
+                    <Button color='red-real' label={data.form.inputs.buttonAccion.label} />
+                </form>
             </div>
         </div>
     </div>

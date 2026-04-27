@@ -19,7 +19,7 @@ const data = content[lang].projects
 
 <section id="projects"  class="bg-center w-full"> 
 
-    <div class="flex flex-col p-10 gap-10 justify-start h-full bg-white-real">   
+    <div class="flex flex-col p-5 md:p-10 gap-10 justify-start h-full bg-white-real">   
         <div class="relative flex w-full overflow-auto scroll-">
             <ul class="flex gap-0 justify-between w-full">
                 {
@@ -51,18 +51,25 @@ const data = content[lang].projects
             <h2 class="text-red-real text-1xl font-alexandria font-bold">
                 {data.subtitle}
             </h2>
-            <h1 class="text-black-real font-bold text-4xl xl:text-6xl mb-2">
+            <h2 class="text-black-real font-bold text-4xl xl:text-6xl mb-2">
                 {data.title}
-            </h1>
+            </h2>
             <div class="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full p-3 gap-5">
                 {
-                    projects && projects.map( project => {
+                    projects && projects.map( (project, index) => {
                         return (
-                                <CardProject project={project} />
+                                <CardProject project={project} color={index % 2 == 0 ? "blue-real" : "red-real"} />
                         )
                     } )
                 }
             </div>
+            {
+                projects.length == 0 &&
+                    <h2 class="text-gray-real text-center font-bold text-4xl xl:text-6xl mb-2 w-full">
+                            Not found
+                    </h2>
+            }
+            
         </div>
     </div>
 

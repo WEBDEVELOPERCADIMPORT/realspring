@@ -5,9 +5,10 @@ import { getIconAmenities } from "../projects/components/getIconAmenities";
 
 interface Props {
     project: Project;
+    color?: string;
 }
 
-const project = Astro.props.project
+const { project, color = "blue-real"} = Astro.props
 
 ---
 
@@ -18,7 +19,7 @@ const project = Astro.props.project
             ${project.price}
         </div>
     </div>
-    <div class="flex flex-col w-full gap-3 border-l-3 border-blue-real p-2">
+    <div class=`flex flex-col w-full gap-3 border-l-3 border-l-${color} p-2`>
         <h3 class="text-black-real font-bold text-2xl">
             {project.name}
         </h3>
@@ -26,7 +27,7 @@ const project = Astro.props.project
             <MapPin size={15} />
             {project.location}
         </p>
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center p-3">
             {
                 project.amenities && project.amenities.slice(0,3).map( item => {
                     const itemIcon = getIconAmenities(item.key)

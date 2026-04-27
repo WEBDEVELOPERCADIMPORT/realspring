@@ -4,14 +4,16 @@
         "filters":{
             "title": "Revisa Todos",
             "subtitle": "Nuestros Proyectos",
-            "form":{
-                    "inputs":{
-                        "searh": "",
-                        "email": "Email",
-                        "description": "We write"
+            "form": {
+                "inputs": {
+                    "search": {
+                        "placeholder": "Buscar..."
                     },
-                    "buttonAccion": "SUBMIT REQUEST"
+                    "buttonAccion": {
+                        "label": "Buscar"
+                    }
                 }
+            }
         },
         "projects": {
             "title": "Nuestros Proyectos",
@@ -44,7 +46,17 @@
         "brandName": "REALSPRING - PROJECTS ",
         "filters":{
             "title": "Check All",
-            "subtitle": "Our Projects"
+            "subtitle": "Our Projects",
+            "form": {
+                "inputs": {
+                    "search": {
+                        "placeholder": "Searh..."
+                    },
+                    "buttonAccion": {
+                        "label": "Searh"
+                    }
+                }
+            }
         },
         "projects": {
             "title": "Our Projects",
