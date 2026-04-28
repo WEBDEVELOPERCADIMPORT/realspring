@@ -3,6 +3,7 @@ import { BedDouble, MapPin } from "lucide-astro";
 import type { Project } from "../../domains/project.interface";
 import { getIconAmenities } from "../projects/components/getIconAmenities";
 import type { Lang } from "../../i18n/config.i18n";
+import { Image } from "astro:assets";
 
 interface Props {
     project: Project;
@@ -17,7 +18,7 @@ const { project, color = "blue-real", lang} = Astro.props
 <div class="w-full flex flex-col hover:shadow-2xl transition-all duration-300">
     <div class="flex w-full object-cover relative">
         <a href=`/${lang}/projects/${project.slug}` class="w-full">
-            <img src={project.image} class="w-full transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl" alt="">
+            <Image src={project.image} class="w-full transition-transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl" alt={project.slug} loading={"eager"} width={800} height={500} />
             <div class="absolute right-0 bottom-0 bg-white-real text-blue-real font-bold text-2xl p-3 ">
                 ${project.price}
             </div>

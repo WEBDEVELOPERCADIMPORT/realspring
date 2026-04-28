@@ -24,9 +24,39 @@ const { data: projectsData, error: projectsError } =  await Astro.callAction(act
 
 const projects = projectsData?.data || undefined
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin).href;
+
+const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    "name": project?.name,
+    "description": project?.description, 
+    "image": [
+        project?.image.startsWith('http') ? project.image : new URL(project?.image as string, Astro.url.origin).href
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": project?.location,
+        "addressCountry": "USA"
+    },
+    "offers": {
+        "@type": "Offer",
+        "price": project?.price,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+    }
+};
+
 ---
 
-<Layout lang={lang} title={dataProject.brandName} >
+<Layout 
+        lang={lang} 
+        title={dataProject.brandName} 
+        description={project?.description} 
+        image={project?.image}  
+        canonicalURL={canonicalURL}
+        schema={projectSchema} 
+    >
     <Detail lang={lang} project={project}  />
     <Amenities lang={lang} amenities={project?.amenities} />
     <Recommended lang={lang} projects={projects} />

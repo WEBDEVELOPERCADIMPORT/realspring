@@ -10,28 +10,49 @@ interface Props {
 	title: string;
 	lang: Lang;
 	description?: string;
+	image?: string;
+	canonicalURL?: string;
+	schema?: object
 }
 
-const { title, lang, description = "Web informativa coorporativa" } = Astro.props;
+const { title, lang, description = "Web informativa coorporativa", image = "/logo_real.png",schema,canonicalURL } = Astro.props;
 
+const alternateLang = lang === 'es' ? 'en' : 'es';
+const alternatePath = Astro.url.pathname.replace(`/${lang}`, `/${alternateLang}`);
+const alternateURL = new URL(alternatePath, Astro.url.origin);
 ---
 
 <!doctype html>
 <html lang={lang}>
 	<head>
-		<ClientRouter />
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/icono_real.png" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/icono_real.png" />
+        <meta name="generator" content={Astro.generator} />
+        <ClientRouter />
 
-		<link rel="canonical" href={Astro.url.href} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={canonicalURL} />
 
-		<link rel="alternate" hreflang="es" href={new URL('/es', Astro.url.origin)} />
-		<link rel="alternate" hreflang="en" href={new URL('/en', Astro.url.origin)} />
-		<link rel="alternate" hreflang="x-default" href={new URL('/es', Astro.url.origin)} />
-		<title>{title}</title>
+        <link rel="alternate" hreflang={lang} href={canonicalURL} />
+        <link rel="alternate" hreflang={alternateLang} href={alternateURL} />
+        <link rel="alternate" hreflang="x-default" href={new URL('/es', Astro.url.origin)} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={new URL(image, Astro.url.origin)} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={new URL(image, Astro.url.origin)} />
+
+        {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
 	</head>
 	<body class="bg-white text-gray-900 antialiased">
 		<Navbar lang={lang} />
