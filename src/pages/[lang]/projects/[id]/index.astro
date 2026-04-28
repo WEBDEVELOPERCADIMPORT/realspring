@@ -2,11 +2,10 @@
 import type { Lang } from "../../../../i18n/config.i18n";
 import content from "../../../../data/site-projects-detail-content.json"
 import Layout from "../../../../layouts/Layout.astro";
-import Detail from "../../../../components/ProjectDetail/sections/Detail.astro";
 import { actions } from "astro:actions";
 import Amenities from "../../../../components/ProjectDetail/sections/Amenities.astro";
 import Recommended from "../../../../components/ProjectDetail/sections/Recommended.astro";
-
+import Detail from "../../../../components/ProjectDetail/sections/Detail.astro";
 
 
 const lang = Astro.params.lang as Lang
