@@ -1,6 +1,10 @@
 {
     "es":{
         "brandName": "REALSPRING - PROYECTOS ",
+        "seo": {
+            "defaultDescription": "Descubre todos nuestros proyectos inmobiliarios disponibles en Central America.",
+            "categoryDescription": "Explora los mejores proyectos de {category} en nuestra plataforma."
+        },
         "filters":{
             "title": "Revisa Todos",
             "subtitle": "Nuestros Proyectos",
@@ -44,6 +48,10 @@
     },
     "en": {
         "brandName": "REALSPRING - PROJECTS ",
+        "seo": {
+            "defaultDescription": "Discover all our available real estate projects in Central America.",
+            "categoryDescription": "Explore the best {category} projects on our platform."
+        },
         "filters":{
             "title": "Check All",
             "subtitle": "Our Projects",

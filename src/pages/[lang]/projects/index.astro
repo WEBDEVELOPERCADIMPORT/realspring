@@ -19,12 +19,16 @@ const { data, error } = await Astro.callAction(actions.getProjects, {category, l
 const projects = data?.data || []
 
 
-const categoryTitle = category !== 'all' ? `${category} | ` : '';
-const seoTitle = `${categoryTitle}${dataProjects.brandName}`;
-const seoDescription = category !== 'all' 
-    ? `Explora los mejores proyectos de ${category} en nuestra plataforma.` 
-    : "Descubre todos nuestros proyectos inmobiliarios disponibles.";
+const currentCategoryName = dataProjects.projects.categories.find(c => c.path === category)?.category || category;
 
+const categoryTitle = category !== 'all' ? `${currentCategoryName} | ` : '';
+const seoTitle = `${categoryTitle}${dataProjects.brandName}`;
+
+let seoDescription = dataProjects.seo.defaultDescription;
+
+if (category !== 'all') {
+    seoDescription = dataProjects.seo.categoryDescription.replace('{category}', currentCategoryName);
+}
 
 const itemListSchema = {
     "@context": "https://schema.org",
