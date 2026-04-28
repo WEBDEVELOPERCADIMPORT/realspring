@@ -10,23 +10,39 @@ import {
 export const getIconAmenities = (key: string) => {
     const data = {
         beds: { 
-            label: "Beds", 
+            label: {
+                es: "Recamaras",
+                en: "Beds"
+            }, 
             icon: BedDouble 
         },
         bathrooms: { 
-            label: "Bathrooms", 
+            label: {
+                es: "Baños",
+                en: "Bathrooms"
+            }
+            , 
             icon: Bath 
         },
         m2: { 
-            label: "m²", 
+            label: {
+                es: "m²",
+                en: "m²"
+            },
             icon: SquareEqual 
         },
         levels: { 
-            label: "Levels", 
+            label: {
+                es: "Niveles",
+                en: "Levels"
+            }, 
             icon: Layers 
         },
         garages: { 
-            label: "Garages", 
+            label: {
+                es: "Garages",
+                en: "Garages"
+            }, 
             icon: CarFront 
         }
     };

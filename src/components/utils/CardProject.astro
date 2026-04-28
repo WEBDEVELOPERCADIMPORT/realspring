@@ -2,11 +2,12 @@
 import { BedDouble, MapPin } from "lucide-astro";
 import type { Project } from "../../domains/project.interface";
 import { getIconAmenities } from "../projects/components/getIconAmenities";
+import type { Lang } from "../../i18n/config.i18n";
 
 interface Props {
     project: Project;
     color?: string;
-    lang: string
+    lang: Lang
 }
 
 const { project, color = "blue-real", lang} = Astro.props
@@ -38,7 +39,7 @@ const { project, color = "blue-real", lang} = Astro.props
                         <div class="text-blue-real font-bold flex gap-2 items-center" >
                             <itemIcon.icon size={20} />
                             <h4 class="text-black-real font-bold">
-                                {item.amount} {itemIcon.label}
+                                {item.amount} {itemIcon.label[lang]}
                             </h4>
                         </div>
                     )

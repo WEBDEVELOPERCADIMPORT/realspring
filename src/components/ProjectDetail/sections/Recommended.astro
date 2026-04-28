@@ -1,0 +1,37 @@
+---
+import content from '../../../data/site-projects-detail-content.json'
+import type { Project } from '../../../domains/project.interface'
+import type { Lang } from '../../../i18n/config.i18n'
+import CardProject from '../../utils/CardProject.astro'
+
+interface Props {
+    lang: Lang
+    projects: Project[] | null | undefined
+}
+
+const { lang, projects } = Astro.props
+
+const data = content[lang].recommended
+---
+
+
+<section id="recommended"  class="bg-center w-full bg-gray-real pt-10"> 
+
+    <div class="flex flex-col p-5 md:p-10 gap-10 justify-start h-full ">   
+        <div class="flex flex-col gap-2 w-full text-left relative bg-gray-real">
+            <h2 class="text-black-real font-bold text-3xl mb-2">
+                {data.title}
+            </h2>
+            <div class="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full p-3 gap-5">
+                {
+                    projects && projects.map( (project, index) => {
+                        return (
+                                <CardProject project={project} color={index % 2 == 0 ? "blue-real" : "red-real"} lang={lang} />
+                        )
+                    } )
+                }
+            </div>
+        </div>
+    </div>
+
+</section>

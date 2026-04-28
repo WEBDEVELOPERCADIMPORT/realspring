@@ -3,12 +3,24 @@
         "brandName": "REALSPRING - PROYECTO ",
         "detail": {
             "title": "La Oportunidad"
+        },
+        "amenities": {
+            "title": "Especificaciones de la propiedad"
+        },
+        "recommended": {
+            "title": "Recomendado para ti"
         }
     },
     "en": {
         "brandName": "REALSPRING - PROJECT ",
         "detail": {
             "title": "The Opportunity"
+        },
+        "amenities": {
+            "title": "Property Specifications"
+        },
+        "recommended": {
+            "title": "Recommended For You"
         }
     }
 }

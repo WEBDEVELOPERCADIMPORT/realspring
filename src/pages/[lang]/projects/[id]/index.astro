@@ -2,8 +2,10 @@
 import type { Lang } from "../../../../i18n/config.i18n";
 import content from "../../../../data/site-projects-detail-content.json"
 import Layout from "../../../../layouts/Layout.astro";
-import Detail from "../../../../components/ProjectDetail/sections/detail.astro";
+import Detail from "../../../../components/ProjectDetail/sections/Detail.astro";
 import { actions } from "astro:actions";
+import Amenities from "../../../../components/ProjectDetail/sections/Amenities.astro";
+import Recommended from "../../../../components/ProjectDetail/sections/Recommended.astro";
 
 
 const lang = Astro.params.lang as Lang
@@ -12,14 +14,21 @@ const dataProject = content[lang]
 
 const id = Astro.params.id;
 
+const limit = 3
 
-const { data, error } =  await Astro.callAction(actions.getProject, { id: id as string, lang })
 
-const project = data?.data || undefined
+const { data: projectData, error: projectError } =  await Astro.callAction(actions.getProject, { id: id as string, lang })
+
+const project = projectData?.data || undefined
+
+const { data: projectsData, error: projectsError } =  await Astro.callAction(actions.getProjects, {lang, limit, actualId: id,category: project?.category})
+
+const projects = projectsData?.data || undefined
 
 ---
 
 <Layout lang={lang} title={dataProject.brandName} >
     <Detail lang={lang} project={project}  />
-
+    <Amenities lang={lang} amenities={project?.amenities} />
+    <Recommended lang={lang} projects={projects} />
 </Layout>

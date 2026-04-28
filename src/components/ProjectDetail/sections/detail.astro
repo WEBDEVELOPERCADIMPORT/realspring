@@ -1,5 +1,5 @@
 ---
-import { MapPin } from 'lucide-astro'
+import { MapPin, ArrowLeft } from 'lucide-astro'
 import content from '../../../data/site-projects-detail-content.json'
 import type { Project } from '../../../domains/project.interface'
 import type { Lang } from '../../../i18n/config.i18n'
@@ -23,7 +23,10 @@ const data = content[lang].detail
     <div class="flex flex-col gap-10 justify-start h-full bg-gray-real">   
         <div class="relative grid grid-col-1  xl:grid-cols-2 w-full overflow-auto">
             <div class="w-full relative xl:pl-5 xl:pt-5">
-                <img src={project?.image} alt="">
+                <button onclick="history.back()"  class="absolute left-5 top-5 bg-white-real/30 text-white-real font-bold  p-3 hover:bg-white-real/50 hover:text-black-real transition-colors duration-300">
+                    <ArrowLeft size={20} />
+                </button>
+                <img src={project?.image} class="w-full" alt="">
                 <div class="absolute right-5 bottom-5 bg-red-real text-white-real font-bold text-2xl p-3 ">
                     ${project?.price}
                 </div>
