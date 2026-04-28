@@ -1,0 +1,56 @@
+---
+import { MapPin } from 'lucide-astro'
+import content from '../../../data/site-projects-detail-content.json'
+import type { Project } from '../../../domains/project.interface'
+import type { Lang } from '../../../i18n/config.i18n'
+
+interface Props {
+    lang: Lang
+    project: Project | null | undefined
+}
+
+
+const { lang, project } = Astro.props
+
+console.log(project)
+
+const data = content[lang].detail
+---
+
+
+<section id="detail"  class="bg-center w-full"> 
+
+    <div class="flex flex-col gap-10 justify-start h-full bg-gray-real">   
+        <div class="relative grid grid-col-1  xl:grid-cols-2 w-full overflow-auto">
+            <div class="w-full relative xl:pl-5 xl:pt-5">
+                <img src={project?.image} alt="">
+                <div class="absolute right-5 bottom-5 bg-red-real text-white-real font-bold text-2xl p-3 ">
+                    ${project?.price}
+                </div>
+            </div>
+            <div class="w-full p-5 flex flex-col gap-10">
+                <header class="bg-white-real p-10">
+                    <h1 class="text-black-real font-bold text-3xl mb-2">
+                        {project?.name}
+                    </h1>
+                    <p class="flex flex-row items-center">
+                        <MapPin size={15} />
+                        {project?.location}
+                    </p>
+                </header>
+
+                <main class="bg-white-real p-10">
+                    <h2 class="text-blue-real font-bold text-2xl mb-2">
+                        {data.title}
+                    </h2>
+                    <p class="flex flex-row items-center">
+                        {project?.description}
+                    </p>
+                </main>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2 w-full text-left relative">
+        </div>
+    </div>
+
+</section>

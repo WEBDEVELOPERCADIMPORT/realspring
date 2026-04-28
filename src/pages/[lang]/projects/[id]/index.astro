@@ -1,0 +1,25 @@
+---
+import type { Lang } from "../../../../i18n/config.i18n";
+import content from "../../../../data/site-projects-detail-content.json"
+import Layout from "../../../../layouts/Layout.astro";
+import Detail from "../../../../components/ProjectDetail/sections/detail.astro";
+import { actions } from "astro:actions";
+
+
+const lang = Astro.params.lang as Lang
+
+const dataProject = content[lang]
+
+const id = Astro.params.id;
+
+
+const { data, error } =  await Astro.callAction(actions.getProject, { id: id as string, lang })
+
+const project = data?.data || undefined
+
+---
+
+<Layout lang={lang} title={dataProject.brandName} >
+    <Detail lang={lang} project={project}  />
+
+</Layout>

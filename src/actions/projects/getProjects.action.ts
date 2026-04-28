@@ -19,7 +19,7 @@ export const  getProjects = defineAction({
         const selectedCategory = category.toLowerCase();
 
         const filtered = projects.projects.filter(p => {
-            const matchesCategory = selectedCategory === "all" || p.type.toLowerCase() === selectedCategory;
+            const matchesCategory = selectedCategory === "all" || p.category.toLowerCase() === selectedCategory;
             const matchesFilter = searchTerm === "" || 
                 p.name.toLowerCase().includes(searchTerm) || 
                 p.location.toLowerCase().includes(searchTerm);

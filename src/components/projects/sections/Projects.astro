@@ -58,7 +58,7 @@ const data = content[lang].projects
                 {
                     projects && projects.map( (project, index) => {
                         return (
-                                <CardProject project={project} color={index % 2 == 0 ? "blue-real" : "red-real"} />
+                                <CardProject project={project} color={index % 2 == 0 ? "blue-real" : "red-real"} lang={lang} />
                         )
                     } )
                 }

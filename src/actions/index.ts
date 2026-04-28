@@ -1,6 +1,7 @@
-import { defineAction } from 'astro:actions';
-import { getProjects } from './projects/project.action';
+import { getProjects } from './projects/getProjects.action';
+import { getProject } from './projects/getProject.action';
 
 export const server = {
-    getProjects
+    getProjects,
+    getProject
 };
