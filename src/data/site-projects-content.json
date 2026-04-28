@@ -38,6 +38,10 @@
                 {
                     "category": "Comercios",
                     "path": "commercial"
+                },
+                {
+                    "category": "Negocios",
+                    "path": "businesess"
                 }
             ]
         }
