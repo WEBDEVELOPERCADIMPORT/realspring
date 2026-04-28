@@ -6,6 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 import cloudflare from '@astrojs/cloudflare';
 import { LANGUAGES } from './src/i18n/config.i18n';
 
+import sitemap from "@astrojs/sitemap"
+
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
@@ -14,7 +16,6 @@ export default defineConfig({
   },
 
   site: 'https://realspringllc.com',
-
   adapter: cloudflare(),
   i18n: {
     defaultLocale: 'es',
@@ -24,5 +25,6 @@ export default defineConfig({
       fallbackType: 'redirect',
       redirectToDefaultLocale: true,
     }
-  }
+  },
+  integrations: [sitemap()]
 });
