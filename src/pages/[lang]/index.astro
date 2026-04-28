@@ -17,9 +17,23 @@ const data = content[lang];
 if (!(lang in content)) {
     return Astro.redirect('/404');
 }
+
+
+const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Real Spring LLC",
+    "url": Astro.url.origin,
+    "logo": new URL("/icono_real.png", Astro.url.origin).href,
+    "sameAs": [
+        "https://facebook.com/tu-perfil",
+        "https://instagram.com/tu-perfil"
+    ],
+    "description": data.description
+};
 ---
 
-<Layout title={data.brandName} lang={lang}>
+<Layout title={data.brandName} lang={lang} description={data.description} schema={homeSchema}>
     <Hero lang={lang} />
     <Legacy lang={lang} />
     <Mandate lang={lang}/>
@@ -37,7 +51,7 @@ if (!(lang in content)) {
                 class="relative w-48 h-48 md:w-64 md:h-64 object-contain animate-float"
             />
             <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-4 bg-black/40 blur-md rounded-full animate-shadow"></div>
-        </div>
+        </div>  
         <h1 class="text-gray-400 text-center">
             ® Real Spring
         </h1> 

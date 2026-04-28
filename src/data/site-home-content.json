@@ -1,188 +1,190 @@
 {
     "es": {
-            "brandName": "REALSPRING - INICIO ",
-            "hero": {
-                "title": "Construido con Autoridad Arquitectónica.",
-                "subtitle": "El referente en excelencia institucional y preservación del capital.",
-                "buttonAccion": "SABER MAS"
-            },
-            "legacy": {
-                "title": "NUESTRO LEGADO",
-                "subtitle": "Un siglo de fortaleza institucional",
-                "content": "Liberty Estate se erige como la piedra angular de la gestión de activos institucionales. Fundada con el mandato de redefinir la excelencia corporativa, hemos sabido adaptarnos a los cambios del mercado global con una precisión inquebrantable. Nuestro legado no se basa únicamente en la superficie, sino en el capital intelectual de los mejores estrategas del mundo.",
-                "metrics": [
+        "brandName": "REALSPRING - INICIO | Bienes Raíces y Proyectos de Lujo en Central America",
+        "description": "Líderes en gestión de activos inmobiliarios y proyectos de lujo en Centroamérica. Con más de un siglo de legado, ofrecemos soluciones institucionales en bienes raíces, preventa y desarrollos de alta gama.",
+        "hero": {
+            "title": "Construido con Autoridad Arquitectónica.",
+            "subtitle": "El referente en excelencia institucional y preservación del capital.",
+            "buttonAccion": "SABER MAS"
+        },
+        "legacy": {
+            "title": "NUESTRO LEGADO",
+            "subtitle": "Un siglo de fortaleza institucional",
+            "content": "Liberty Estate se erige como la piedra angular de la gestión de activos institucionales. Fundada con el mandato de redefinir la excelencia corporativa, hemos sabido adaptarnos a los cambios del mercado global con una precisión inquebrantable. Nuestro legado no se basa únicamente en la superficie, sino en el capital intelectual de los mejores estrategas del mundo.",
+            "metrics": [
+                {
+                    "id": 1,
+                    "title": "1924",
+                    "subtitle": "FUNDADO"
+                },
+                {
+                    "id": 2,
+                    "title": "$42B+",
+                    "subtitle": "ADMINISTRACION DE RECURSOS"
+                }
+            ]
+        },
+        "mandate": {
+            "title": "EL MANDATO",
+            "subtitle": "Liderazgo institucional en los mercados globales.",
+            "content": {
+                "paragraphs": [
                     {
                         "id": 1,
-                        "title": "1924",
-                        "subtitle": "FUNDADO"
+                        "paragraph": "Operamos en la intersección del capital y la comunidad. Nuestra misión es diseñar entornos de alto rendimiento que faciliten el comercio global. Desde la identificación de cambios estructurales en la logística urbana hasta el despliegue de análisis avanzados en corredores de crecimiento suburbano, Liberty Estate proporciona el marco estratégico para la inversión institucional a gran escala."
                     },
                     {
                         "id": 2,
-                        "title": "$42B+",
-                        "subtitle": "ADMINISTRACION DE RECURSOS"
+                        "paragraph": "Nuestro liderazgo va más allá de la mera gestión; proporcionamos los planos arquitectónicos para la futura estabilidad económica. Al priorizar la resiliencia a largo plazo sobre la volatilidad a corto plazo, garantizamos que cada iniciativa bajo el estandarte de Liberty sirva como pilar del panorama económico general."
                     }
                 ]
-            },
-            "mandate": {
-                "title": "EL MANDATO",
-                "subtitle": "Liderazgo institucional en los mercados globales.",
-                "content": {
-                    "paragraphs": [
-                        {
-                            "id": 1,
-                            "paragraph": "Operamos en la intersección del capital y la comunidad. Nuestra misión es diseñar entornos de alto rendimiento que faciliten el comercio global. Desde la identificación de cambios estructurales en la logística urbana hasta el despliegue de análisis avanzados en corredores de crecimiento suburbano, Liberty Estate proporciona el marco estratégico para la inversión institucional a gran escala."
-                        },
-                        {
-                            "id": 2,
-                            "paragraph": "Nuestro liderazgo va más allá de la mera gestión; proporcionamos los planos arquitectónicos para la futura estabilidad económica. Al priorizar la resiliencia a largo plazo sobre la volatilidad a corto plazo, garantizamos que cada iniciativa bajo el estandarte de Liberty sirva como pilar del panorama económico general."
-                        }
-                    ]
-                }
-            },
-            "visionary": {
-                "title": "LA VISION CENTRAL",
-                "content": {
-                    "paragraphs": [
-                        {
-                            "id": 1,
-                            "title": "MISIÓN",
-                            "paragraph": "Diseñar un valor perdurable mediante la integridad estructural y la disciplina intelectual, fomentando un ecosistema global donde el capital institucional impulse el progreso humano."
-                        },
-                        {
-                            "id": 2,
-                            "title": "VISIÓN",
-                            "paragraph": "Estableciendo el referente definitivo en materia de responsabilidad corporativa, Liberty Estate se erige como sinónimo principal de confianza, autoridad y excelencia preparada para el futuro."
-                        }
-                    ]
-                }
-            },
-            "history": {
-                "title": "EL CENTRO VISIONARIO",
-                "content": {
-                    "dates": [
-                        {
-                            "id": 1,
-                            "date": "1924",
-                            "squareColor": "blue-real",
-                            "title": "El Acta Fundacional",
-                            "paragraph": "Establecida en la ciudad de Nueva York con el mandato de proporcionar financiamiento estructural para el creciente horizonte de la nación."
-                        },
-                        {
-                            "id": 2,
-                            "date": "1968",
-                            "squareColor": "blue-real",
-                            "title": "Expansión Continental",
-                            "paragraph": "Inauguró oficinas regionales a través del Sun Belt, liderando la revolución económica suburbana."
-                        },
-                        {
-                            "id": 3,
-                            "date": "2005",
-                            "squareColor": "red-real",
-                            "title": "Pivote Institucional",
-                            "paragraph": "Consolidó activos bajo el estandarte \"Liberty\", centrándose exclusivamente en participaciones institucionales de alto rendimiento."
-                        },
-                        {
-                            "id": 4,
-                            "date": "2024",
-                            "squareColor": "blue-real",
-                            "title": "Arquitectura Global",
-                            "paragraph": "Aprovechando la inteligencia digital para gestionar una cartera de más de 42 mil millones de dólares en infraestructura esencial y comercio."
-                        }
-                    ]
-                }
             }
+        },
+        "visionary": {
+            "title": "LA VISION CENTRAL",
+            "content": {
+                "paragraphs": [
+                    {
+                        "id": 1,
+                        "title": "MISIÓN",
+                        "paragraph": "Diseñar un valor perdurable mediante la integridad estructural y la disciplina intelectual, fomentando un ecosistema global donde el capital institucional impulse el progreso humano."
+                    },
+                    {
+                        "id": 2,
+                        "title": "VISIÓN",
+                        "paragraph": "Estableciendo el referente definitivo en materia de responsabilidad corporativa, Liberty Estate se erige como sinónimo principal de confianza, autoridad y excelencia preparada para el futuro."
+                    }
+                ]
+            }
+        },
+        "history": {
+            "title": "EL CENTRO VISIONARIO",
+            "content": {
+                "dates": [
+                    {
+                        "id": 1,
+                        "date": "1924",
+                        "squareColor": "blue-real",
+                        "title": "El Acta Fundacional",
+                        "paragraph": "Establecida en la ciudad de Nueva York con el mandato de proporcionar financiamiento estructural para el creciente horizonte de la nación."
+                    },
+                    {
+                        "id": 2,
+                        "date": "1968",
+                        "squareColor": "blue-real",
+                        "title": "Expansión Continental",
+                        "paragraph": "Inauguró oficinas regionales a través del Sun Belt, liderando la revolución económica suburbana."
+                    },
+                    {
+                        "id": 3,
+                        "date": "2005",
+                        "squareColor": "red-real",
+                        "title": "Pivote Institucional",
+                        "paragraph": "Consolidó activos bajo el estandarte \"Liberty\", centrándose exclusivamente en participaciones institucionales de alto rendimiento."
+                    },
+                    {
+                        "id": 4,
+                        "date": "2024",
+                        "squareColor": "blue-real",
+                        "title": "Arquitectura Global",
+                        "paragraph": "Aprovechando la inteligencia digital para gestionar una cartera de más de 42 mil millones de dólares en infraestructura esencial y comercio."
+                    }
+                ]
+            }
+        }
     },
     "en": {
-            "brandName": "REALSPRING - HOME ",
-            "hero": {
-                "title": "Built with Architectural Authority.",
-                "subtitle": "The standard in institutional excellence and capital preservation.",
-                "buttonAccion": "EXECUTIVE OVERVIEW"
-            },
-            "legacy": {
-                "title": "OUR LEGACY",
-                "subtitle": "A Century of Institutional Fortitude",
-                "content": "Liberty Estate stands as the cornerstone of institutional asset management. Established with a mandate to redefine corporate excellence, we have navigated global market shifts with unwavering precision. Our legacy is not just built on square footage, but on the intellectual capital of the world's finest strategists.",
-                "metrics": [
+        "brandName": "REALSPRING - HOME | Luxury Real Estate and Projects in Central America",
+        "description": "Premier institutional asset management and luxury real estate developers in Central America. Discover high-end residential projects and strategic investment opportunities with over a century of expertise.",
+        "hero": {
+            "title": "Built with Architectural Authority.",
+            "subtitle": "The standard in institutional excellence and capital preservation.",
+            "buttonAccion": "EXECUTIVE OVERVIEW"
+        },
+        "legacy": {
+            "title": "OUR LEGACY",
+            "subtitle": "A Century of Institutional Fortitude",
+            "content": "Liberty Estate stands as the cornerstone of institutional asset management. Established with a mandate to redefine corporate excellence, we have navigated global market shifts with unwavering precision. Our legacy is not just built on square footage, but on the intellectual capital of the world's finest strategists.",
+            "metrics": [
+                {
+                    "id": 1,
+                    "title": "1924",
+                    "subtitle": "FOUNDATION"
+                },
+                {
+                    "id": 2,
+                    "title": "$42B+",
+                    "subtitle": "ASSETS MANAGED"
+                }
+            ]
+        },
+        "mandate": {
+            "title": "THE MANDATE",
+            "subtitle": "Institutional Leadership in Global Markets.",
+            "content": {
+                "paragraphs": [
                     {
                         "id": 1,
-                        "title": "1924",
-                        "subtitle": "FOUNDATION"
+                        "paragraph": "We operate at the intersection of capital and community. Our mission is to engineer high-performing environments that facilitate global commerce. From identifying structural shifts in urban logistics to deploying advanced analytics in suburban growth corridors, Liberty Estate provides the strategic framework for large-scale institutional investment."
                     },
                     {
                         "id": 2,
-                        "title": "$42B+",
-                        "subtitle": "ASSETS MANAGED"
+                        "paragraph": "Our leadership extends beyond mere management; we provide the architectural blueprints for future economic stability. By prioritizing long-cycle resilience over short-term volatility, we ensure that every initiative under the Liberty banner serves as a pillar of the broader economic landscape."
                     }
                 ]
-            },
-            "mandate": {
-                "title": "THE MANDATE",
-                "subtitle": "Institutional Leadership in Global Markets.",
-                "content": {
-                    "paragraphs": [
-                        {
-                            "id": 1,
-                            "paragraph": "We operate at the intersection of capital and community. Our mission is to engineer high- performing environments that facilitate global commerce. From identifying structural shifts in urban logistics to deploying advanced analytics in suburban growth corridors, Liberty Estate provides the strategic framework for large-scale institutional investment."
-                        },
-                        {
-                            "id": 2,
-                            "paragraph": "Our leadership extends beyond mere management; we provide the architectural blueprints for future economic stability. By prioritizing long-cycle resilience over short- term volatility, we ensure that every initiative under the Liberty banner serves as a pillar of the broader economic landscape."
-                        }
-                    ]
-                }
-            },
-            "visionary": {
-                "title": "THE VISIONARY CORE",
-                "content": {
-                    "paragraphs": [
-                        {
-                            "id": 1,
-                            "title": "MISSION",
-                            "paragraph": "To architect enduring value through structural integrity and intellectual discipline, fostering a global ecosystem where institutional capital drives human progress."
-                        },
-                        {
-                            "id": 2,
-                            "title": "VISION",
-                            "paragraph": "Setting the definitive benchmark for corporate stewardship, where Liberty Estate serves as the primary synonym for trust, authority, and future-ready excellence."
-                        }
-                    ]
-                }
-            },
-            "history": {
-                "title": "THE VISIONARY CORE",
-                "content": {
-                    "dates": [
-                        {
-                            "id": 1,
-                            "date": "1924",
-                            "squareColor": "blue-real",
-                            "title": "The Founding Charter",
-                            "paragraph": "Established in New York City with a mandate to provide structural financing for the nation's rising skyline."
-                        },
-                        {
-                            "id": 2,
-                            "date": "1968",
-                            "squareColor": "blue-real",
-                            "title": "Continental Expansion",
-                            "paragraph": "Inaugurated regional offices across the Sun Belt, spearheading the suburban economic revolution."
-                        },
-                        {
-                            "id": 3,
-                            "date": "2005",
-                            "squareColor": "red-real",
-                            "title": "Institutional Pivot",
-                            "paragraph": "Consolidated assets under the \"Liberty\" banner, focusing exclusively on high-yield institutional holdings."
-                        },
-                        {
-                            "id": 4,
-                            "date": "2024",
-                            "squareColor": "blue-real",
-                            "title": "Global Architecture",
-                            "paragraph": "Leveraging digital-first intelligence to manage a $42B+ portfolio of essential infrastructure and commerce."
-                        }
-                    ]
-                }
             }
+        },
+        "visionary": {
+            "title": "THE VISIONARY CORE",
+            "content": {
+                "paragraphs": [
+                    {
+                        "id": 1,
+                        "title": "MISSION",
+                        "paragraph": "To architect enduring value through structural integrity and intellectual discipline, fostering a global ecosystem where institutional capital drives human progress."
+                    },
+                    {
+                        "id": 2,
+                        "title": "VISION",
+                        "paragraph": "Setting the definitive benchmark for corporate stewardship, where Liberty Estate serves as the primary synonym for trust, authority, and future-ready excellence."
+                    }
+                ]
+            }
+        },
+        "history": {
+            "title": "THE VISIONARY CORE",
+            "content": {
+                "dates": [
+                    {
+                        "id": 1,
+                        "date": "1924",
+                        "squareColor": "blue-real",
+                        "title": "The Founding Charter",
+                        "paragraph": "Established in New York City with a mandate to provide structural financing for the nation's rising skyline."
+                    },
+                    {
+                        "id": 2,
+                        "date": "1968",
+                        "squareColor": "blue-real",
+                        "title": "Continental Expansion",
+                        "paragraph": "Inaugurated regional offices across the Sun Belt, spearheading the suburban economic revolution."
+                    },
+                    {
+                        "id": 3,
+                        "date": "2005",
+                        "squareColor": "red-real",
+                        "title": "Institutional Pivot",
+                        "paragraph": "Consolidated assets under the \"Liberty\" banner, focusing exclusively on high-yield institutional holdings."
+                    },
+                    {
+                        "id": 4,
+                        "date": "2024",
+                        "squareColor": "blue-real",
+                        "title": "Global Architecture",
+                        "paragraph": "Leveraging digital-first intelligence to manage a $42B+ portfolio of essential infrastructure and commerce."
+                    }
+                ]
+            }
+        }
     }
 }
