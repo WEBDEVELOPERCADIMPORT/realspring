@@ -51,7 +51,7 @@ const projectSchema = {
 
 <Layout 
         lang={lang} 
-        title={dataProject.brandName} 
+        title={project?.name || dataProject.brandName} 
         description={project?.description} 
         image={project?.image}  
         canonicalURL={canonicalURL}
