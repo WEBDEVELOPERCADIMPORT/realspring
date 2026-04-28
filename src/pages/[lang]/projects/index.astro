@@ -17,9 +17,28 @@ const dataProjects = content[lang]
 const { data, error } = await Astro.callAction(actions.getProjects, {category, lang,filter})
 
 const projects = data?.data || []
+
+
+const categoryTitle = category !== 'all' ? `${category} | ` : '';
+const seoTitle = `${categoryTitle}${dataProjects.brandName}`;
+const seoDescription = category !== 'all' 
+    ? `Explora los mejores proyectos de ${category} en nuestra plataforma.` 
+    : "Descubre todos nuestros proyectos inmobiliarios disponibles.";
+
+
+const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": projects.slice(0, 10).map((project, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": new URL(`/${lang}/projects/${project.slug}`, Astro.url.origin).href,
+        "name": project.name
+    }))
+};
 ---
 
-<Layout title={dataProjects.brandName} lang={lang}>
+<Layout title={seoTitle} lang={lang} description={seoDescription} schema={itemListSchema}>
     <Filters lang={lang} categoryName={category} searhName={filter} />
     <Projects lang={lang} projects={projects} categoryName={category} />
 </Layout>
