@@ -24,24 +24,20 @@
             "subtitle": "NUEVA LISTA",
             "categories": [
                 {
-                    "category": "All",
+                    "category": "Todos",
                     "path": "all"
                 },
                 {
-                    "category": "House",
+                    "category": "Casas",
                     "path": "house"
                 },
                 {
-                    "category": "Apartment",
+                    "category": "Apartamentos",
                     "path": "apartment"
                 },
                 {
-                    "category": "Commercial",
+                    "category": "Comercios",
                     "path": "commercial"
-                },
-                {
-                    "category": "Businesses",
-                    "path": "businesess"
                 }
             ]
         }
@@ -70,26 +66,26 @@
             "title": "Our Projects",
             "subtitle": "NEW LISTINGS",
             "categories": [
-            {
-                "category": "Todos",
-                "path": "all"
-            },
-            {
-                "category": "Casas",
-                "path": "house"
-            },
-            {
-                "category": "Apartamentos",
-                "path": "apartment"
-            },
-            {
-                "category": "Comercios",
-                "path": "commercial"
-            },
-            {
-                "category": "Negocios",
-                "path": "businesess"
-            }
+                {
+                    "category": "All",
+                    "path": "all"
+                },
+                {
+                    "category": "House",
+                    "path": "house"
+                },
+                {
+                    "category": "Apartment",
+                    "path": "apartment"
+                },
+                {
+                    "category": "Commercial",
+                    "path": "commercial"
+                },
+                {
+                    "category": "Businesses",
+                    "path": "businesess"
+                }
         ]
         }
     }
