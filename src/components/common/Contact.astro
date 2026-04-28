@@ -25,16 +25,60 @@ const data = useTranslations(lang).contact
             {data.subtitle}
         </h3>
         <div class="w-full xl:w-2xl justify-center">
-            <form action="" class="relative bg-white-real border-l-3 border-l-blue-real flex flex-col gap-3 p-10 shadow-2xl">
+            <form id="contact-form" action="" class="relative bg-white-real border-l-3 border-l-blue-real flex flex-col gap-3 p-10 shadow-2xl">
                 <div class="absolute right-0 top-0  w-15 h-15 bg-red-real opacity-10"></div>  
-                <Input label={data.form.inputs.name} ref='name' type={'text'}  />
-                <Input label={data.form.inputs.email} ref='email' type={'text'}  />
-                <Textarea label={data.form.inputs.description} ref='email' rows={4} />
+                <Input label={data.form.inputs.name} ref='name' type={'text'} required  />
+                <Input label={data.form.inputs.email} ref='email' type={'text'} required  />
+                <Textarea label={data.form.inputs.description} ref='message' rows={4} required />
                 <div class="flex flex-col">
                     <Button color='red-real' labelColor='white-real' label={data.form.buttonAccion} />
                 </div>
+                    <p id="form-message" class="hidden"></p>
             </form>
         </div>
     </div>
 
 </section>
+
+
+<script>
+    import { actions } from "astro:actions";
+    
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const messageBox = document.getElementById('form-message');
+    const btn = form?.querySelector('button');
+
+    form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        if (btn){
+            btn.disabled = true
+            
+        }
+
+        const formData = new FormData(form);
+
+        const { data, error } = await actions.postContactGHL(formData)
+
+        if (btn) {
+            btn.disabled = false;
+        }
+
+        if (error) {
+            if (messageBox) {
+                messageBox.textContent = "Error: " + (error.message || "Something went wrong");
+                messageBox.className = "block text-red-500 font-alexandria mt-4 text-center";
+            }} else {
+            if (messageBox) {
+                messageBox.textContent = "¡Message sent successfully!";
+                messageBox.className = "block text-green-500 font-alexandria mt-4 text-center";
+            }
+            form.reset();
+
+            setTimeout(() => {
+                if (messageBox) messageBox.className = "hidden";
+            }, 5000);
+            
+        }
+    })
+</script>

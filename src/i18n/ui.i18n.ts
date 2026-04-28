@@ -8,7 +8,7 @@ export const ui = {
                 subtitle: "Escríbanos para recibir información",
                 form: {
                     inputs: {
-                        name: "Nombre Completo",
+                        name: "Primer Nombre",
                         email: "Correo Electrónico",
                         description: "Escríbenos tu mensaje"
                     },
@@ -25,7 +25,7 @@ export const ui = {
                 subtitle: "Write to us to receive information",
                 form:{
                     inputs:{
-                        name: "Full Name",
+                        name: "First Name",
                         email: "Email",
                         description: "We write"
                     },
