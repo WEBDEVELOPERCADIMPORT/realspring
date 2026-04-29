@@ -21,12 +21,12 @@ const data = content[lang].detail
     <div class="flex flex-col gap-10 justify-start h-full bg-gray-real">   
         <div class="relative grid grid-col-1  xl:grid-cols-2 w-full overflow-auto">
             <div class="w-full relative xl:pl-5 xl:pt-5">
-                <button onclick="history.back()"  class="absolute left-5 top-5 bg-white-real/30 text-white-real font-bold  p-3 hover:bg-white-real/50 hover:text-black-real transition-colors duration-300">
+                <a href=`/${lang}/projects?category=${project?.category}`  class="absolute left-5 top-5 bg-white-real/30 text-white-real font-bold  p-3 hover:bg-white-real/50 hover:text-black-real transition-colors duration-300">
                     <ArrowLeft size={20} />
-                </button>
+                </a>
                 {
                     project && (
-                        <Image src={project?.image} class="w-full" alt={project?.slug} loading={"lazy"} width={800} height={500} />
+                        <Image src={project?.image} class="w-full" alt={project?.slug} loading={"eager"} width={800} height={500} />
                     )
                 }
                 <div class="absolute right-5 bottom-5 bg-red-real text-white-real font-bold text-2xl p-3 ">
