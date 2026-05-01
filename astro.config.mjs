@@ -19,7 +19,7 @@ export default defineConfig({
   adapter: cloudflare(),
   i18n: {
     defaultLocale: 'es',
-    locales: Object.keys(LANGUAGES),
+    locales: ['en', 'es'],
     routing: {
       prefixDefaultLocale: true,
       fallbackType: 'redirect',
@@ -29,13 +29,18 @@ export default defineConfig({
   integrations: [sitemap({
     i18n: {
       defaultLocale: 'es',
-      locales: LANGUAGES
+      locales: {
+        en: 'en',
+        es: 'es'
+      },
+      
     },
+    
     changefreq: 'weekly',
     priority: 0.7,
     lastmod: new Date(),
     customPages: [
-      'https://realspringllc.com/es/',
+      'https://realspringllc.com/',
       'https://realspringllc.com/en/'
     ]
   })]

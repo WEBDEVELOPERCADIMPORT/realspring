@@ -7,67 +7,86 @@ import '../styles/global.css';
 import Contact from '../components/common/Contact.astro';
 
 interface Props {
-	title: string;
-	lang: Lang;
-	description?: string;
-	image?: string;
-	canonicalURL?: string;
-	schema?: object
+    title: string;
+    lang: Lang;
+    description?: string;
+    image?: string;
+    schema?: object;
 }
 
-const { title, lang, description = "Web informativa coorporativa", image = "/logo_real.png",schema,canonicalURL } = Astro.props;
+const { 
+    title, 
+    lang, 
+    description = "Real Spring LLC - Soluciones profesionales de limpieza y mantenimiento.", 
+    image = "/logo_real.png", 
+    schema 
+} = Astro.props;
 
-const alternateLang = lang === 'es' ? 'en' : 'es';
-const alternatePath = Astro.url.pathname.replace(`/${lang}`, `/${alternateLang}`);
-const alternateURL = new URL(alternatePath, Astro.url.origin);
+const baseUrl = "https://realspringllc.com";
+const esURL = `${baseUrl}/es/`;
+const enURL = `${baseUrl}/en/`;
+
+// Canonical dinámico: Español apunta a la raíz, Inglés a su carpeta.
+const canonicalURL = lang === 'es' ? `${baseUrl}/` : enURL;
+const socialImageURL = new URL(image, Astro.url.origin).href;
 ---
 
 <!doctype html>
 <html lang={lang}>
-	<head>
-		<meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/icono_real.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
-        <ClientRouter />
-
+        <meta name="theme-color" content="#ffffff" /> <link rel="icon" type="image/png" href="/icono_real.png" />
+        
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={canonicalURL} />
 
-        <link rel="alternate" hreflang={lang} href={canonicalURL} />
-        <link rel="alternate" hreflang={alternateLang} href={alternateURL} />
-        <link rel="alternate" hreflang="x-default" href={new URL('/es', Astro.url.origin)} />
+        <link rel="canonical" href={canonicalURL} />
+        <link rel="alternate" hreflang="es" href={esURL} />
+        <link rel="alternate" hreflang="en" href={enURL} />
+        <link rel="alternate" hreflang="x-default" href={baseUrl} />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={Astro.url} />
+        <meta property="og:site_name" content="Real Spring LLC" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={new URL(image, Astro.url.origin)} />
+        <meta property="og:image" content={socialImageURL} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={title} />
 
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={Astro.url} />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={new URL(image, Astro.url.origin)} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={Astro.url} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={socialImageURL} />
+
+        <meta name="apple-mobile-web-app-title" content="Real Spring" />
+        <meta name="application-name" content="Real Spring LLC" />
+
+        <ClientRouter />
 
         {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
-	</head>
-	<body class="bg-white text-gray-900 antialiased">
-		<Navbar lang={lang} />
-		<main>
-			
-			<slot /> 
-		</main>
-		<Contact lang={lang} />
-		<Footer lang={lang} />
-	</body>
+    </head>
+    <body class="bg-white text-gray-900 antialiased">
+        <Navbar lang={lang} />
+        <main>
+            <slot /> 
+        </main>
+        <Contact lang={lang} />
+        <Footer lang={lang} />
+    </body>
 </html>
 
-
 <style is:global>
-	html {
-		scroll-behavior: smooth;
-	}
+    html {
+        scroll-behavior: smooth;
+    }
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation-duration: 0.4s;
+    }
 </style>

@@ -24,7 +24,6 @@ const { data: projectsData, error: projectsError } =  await Astro.callAction(act
 
 const projects = projectsData?.data || undefined
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin).href;
 
 const projectSchema = {
     "@context": "https://schema.org",
@@ -55,7 +54,6 @@ const projectSchema = {
         title={project?.name || dataProject.brandName} 
         description={project?.description} 
         image={project?.image}  
-        canonicalURL={canonicalURL}
         schema={projectSchema} 
     >
     <Detail lang={lang} project={project}  />
