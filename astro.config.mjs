@@ -33,6 +33,10 @@ export default defineConfig({
     },
     changefreq: 'weekly',
     priority: 0.7,
-    lastmod: new Date()
+    lastmod: new Date(),
+    customPages: [
+      'https://realspringllc.com/es/',
+      'https://realspringllc.com/en/'
+    ]
   })]
 });
