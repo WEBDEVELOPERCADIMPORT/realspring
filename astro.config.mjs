@@ -26,5 +26,13 @@ export default defineConfig({
       redirectToDefaultLocale: true,
     }
   },
-  integrations: [sitemap()]
+  integrations: [sitemap({
+    i18n: {
+      defaultLocale: 'es',
+      locales: LANGUAGES
+    },
+    changefreq: 'weekly',
+    priority: 0.7,
+    lastmod: new Date()
+  })]
 });
