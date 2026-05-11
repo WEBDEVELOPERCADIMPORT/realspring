@@ -1,3 +1,73 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import content from '../data/site-home-content.json';
+import type { Lang } from '../i18n/config.i18n';
+import Hero from '../components/home/sections/Hero.astro';
+import Legacy from '../components/home/sections/Legacy.astro';
+import Mandate from '../components/home/sections/Mandate.astro';
+import Visionary from '../components/home/sections/Visionary.astro';
+import History from '../components/home/sections/History.astro';
+import { Image } from 'astro:assets';
+import logoReal from "/public/icono_real.png";
+import logoCentral from "/public/logo_central america.png";
 
+const lang = 'es' as Lang;
+const data = content[lang];
+
+if (!(lang in content)) {
+    return Astro.redirect('/404');
+}
+
+
+const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Real Spring LLC",
+    "url": Astro.url.origin,
+    "logo": new URL("/icono_real.png", Astro.url.origin).href,
+    "sameAs": [
+        "https://facebook.com/tu-perfil",
+        "https://instagram.com/tu-perfil"
+    ],
+    "description": data.description
+};
 ---
+
+<Layout title={data.brandName} lang={lang} description={data.description} schema={homeSchema}>
+    <Hero lang={lang} />
+    <Legacy lang={lang} />
+    <Mandate lang={lang}/>
+    <Visionary lang={lang}/>
+    <History lang={lang}/>
+    <div class="min-h-screen flex flex-col items-center justify-center relative p-6 bg-white-real">
+        
+        <div class="relative group mb-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#21D4ED] to-[#AF25FD] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 rounded-full"></div>
+            <Image
+                src={logoReal}
+                alt={`Logo de ${data.brandName} - Real Spring`} 
+                width={256} 
+                height={256} 
+                class="relative w-48 h-48 md:w-64 md:h-64 object-contain animate-float"
+            />
+            <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-4 bg-black/40 blur-md rounded-full animate-shadow"></div>
+        </div>  
+        <h1 class="text-gray-400 text-center">
+            ® Real Spring
+        </h1> 
+        <div class="relative group mb-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#21D4ED] to-[#AF25FD] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 rounded-full"></div>
+                <Image
+                    src={logoCentral}
+                    alt={`Logo de ${data.brandName} - Real Spring`} 
+                    width={780} 
+                    height={255} 
+                class="relative w-48 h-48 md:w-64 md:h-64 object-contain animate-float"
+                />
+            <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-4 bg-black/40 blur-md rounded-full animate-shadow"></div>
+        </div>
+        <h1 class="text-gray-400 text-center">
+            ® Central America
+        </h1>
+    </div>
+</Layout>

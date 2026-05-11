@@ -22,8 +22,6 @@ export default defineConfig({
     locales: ['en', 'es'],
     routing: {
       prefixDefaultLocale: true,
-      fallbackType: 'redirect',
-      redirectToDefaultLocale: true,
     }
   },
   integrations: [sitemap({
